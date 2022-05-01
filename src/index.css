@@ -1,3 +1,33 @@
+/* :root {
+  --color-primary: #5126fe;
+  --color-secondary: #fc2152;
+  --color-accent: #fd6b02;
+  --color-background: #e9f3fc;
+  --color-card-background: #f7fcff;
+  --color-primary-button: #7363ff;
+  --color-secondary-button: #f8f9fa;
+  --color-disabled-button: #c9c8cf;
+  --color-primary-text: #1d2452;
+  --color-secondary-text: #9297ad;
+  --color-sidebar-menu-text: #9ba1b9;
+
+  --border-radius: 12px;
+  --border-radius-small: 4px;
+  --border-radius-large: 24px;
+
+  --font-size-small: 12px;
+  --font-size-medium: 14px;
+  --font-size-large: 16px;
+
+  --padding: 16px;
+  --padding-small: 8px;
+  --padding-large: 24px;
+
+  --margin: 16px;
+  --margin-small: 8px;
+  --margin-large: 24px;
+} */
+
 *,
 body {
   margin: 0;
@@ -13,4 +43,5 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
 }

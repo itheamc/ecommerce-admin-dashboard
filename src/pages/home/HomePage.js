@@ -1,8 +1,11 @@
 import React from 'react'
+import { HomeContainer } from './Style'
 
 const HomePage = () => {
     return (
-        <div>HomePage</div>
+        <HomeContainer>
+            Home Page
+        </HomeContainer>
     )
 }
 
