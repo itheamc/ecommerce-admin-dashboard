@@ -12,3 +12,4 @@ export const Card = styled.div`
     border-radius: ${props => props.theme.border_radius.medium};
     padding: ${props => props.theme.padding.medium};
 `;
+
