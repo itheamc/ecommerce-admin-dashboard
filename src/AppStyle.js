@@ -11,7 +11,7 @@ export const MainContainer = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: ${props => props.theme.background_color};
+  background-color: ${props => props.theme.color.background};
 `
 
 
@@ -25,7 +25,7 @@ export const SideMenuContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: ${props => props.theme.sidebar_background_color};
+  background-color: ${props => props.theme.color.sidebar_background};
 `
 
 
@@ -98,5 +98,6 @@ export const MenuItem = styled.li`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  padding: ${props => props.theme.padding || "20px"};
+  padding: ${props => props.theme.padding.medium || "20px"};
+  background-color: ${props => props.selected ? props.theme.color.selected_item : "transparent"};
 `

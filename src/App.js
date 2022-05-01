@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components';
 import './AppStyle.js';
@@ -24,6 +24,7 @@ function App() {
 
   const theme = useSelector(themeValueSelector);
   const dispatch = useDispatch();
+  const [selected, setSelected] = useState(0);
 
   return (
     <ThemeProvider theme={theme == "dark" ? darkTheme : lightTheme}>
@@ -37,13 +38,13 @@ function App() {
             </MenuHeaderContainer>
             <MenuItemsContainer>
               <PrimaryMenuItems>
-                <MenuItem>
+                <MenuItem selected={selected == 0} onClick={() => setSelected(0)}>
                   <NavLink to="/">Home</NavLink>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem selected={selected == 1} onClick={() => setSelected(1)}>
                   <NavLink to="/orders">Orders</NavLink>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem selected={selected == 2} onClick={() => setSelected(2)}>
                   <NavLink to="/products">Products</NavLink>
                 </MenuItem>
               </PrimaryMenuItems>

@@ -1,69 +1,101 @@
-export const lightTheme = {
-    primary_color: '#5126fe',
-    secondary_color: '#fc2152',
-    accent_color: '#fd6b02',
-    background_color: '#e9f3fc',
-    card_background_color: '#f7fcff',
-    error_color: '#f44336',
-    primary_button_color: '#7363ff',
-    secondary_button_color: '#f8f9fa',
-    primary_text_color: '#1d2452',
-    secondary_text_color: '#9297ad',
-    divider_color: '#bdbdbd',
-    disabled_color: '#bdbdbd',
-    sidebar_item_text_color: '#9ba1b9',
-    sidebar_background_color: '#ffffff',
-    selected_item_background_color: '#f2f5fe',
-    selected_item_color: '#00bcd4',
-    selected_item_border_color: '#00bcd4',
-    selected_item_border_width: '1px',
-    padding: '20px',
-    padding_sm: '12px',
-    padding_xs: '8px',
-    margin: '20px',
-    margin_sm: '12px',
-    margin_xs: '8px',
-    radius: '20px',
-    radius_sm: '12px',
-    radius_xs: '8px',
-    font_size: '14px',
-    font_size_lg: '16px',
-    font_size_xl: '18px',
-    font_size_sm: '12px',
-    font_size_xs: '10px'
+/**
+ * Extra theme properties
+ */
+const extras = {
+    font_size: {
+        small: '12px',
+        medium: '14px',
+        large: '16px',
+        x_large: '18px',
+        xx_large: '20px',
+        xxx_large: '24px'
+    },
+    font_weight: {
+        light: '300',
+        regular: '400',
+        medium: '500',
+        bold: '700',
+        bolder: '900'
+    },
+    padding: {
+        small: '8px',
+        medium: '16px',
+        large: '24px',
+        x_large: '32px',
+        xx_large: '48px'
+    },
+    margin: {
+        small: '8px',
+        medium: '16px',
+        large: '24px',
+        x_large: '32px',
+        xx_large: '48px'
+    },
+    border_radius: {
+        small: '4px',
+        medium: '8px',
+        large: '16px',
+        x_large: '32px',
+        xx_large: '64px'
+    },
+    border_width: {
+        small: '1px',
+        medium: '2px',
+        large: '4px',
+        x_large: '8px',
+    },
 };
 
+
+/**
+ * Light Theme Object
+ */
+export const lightTheme = {
+    color: {
+        primary: '#5126fe',
+        secondary: '#fc2152',
+        accent: '#fd6b02',
+        background: '#e9f3fc',
+        card_background: '#f7fcff',
+        error: '#f44336',
+        primary_button: '#7363ff',
+        secondary_button: '#f8f9fa',
+        primary_text: '#1d2452',
+        secondary_text: '#9297ad',
+        menu_item_text: '#9ba1b9',
+        divider: '#bdbdbd',
+        disabled: '#bdbdbd',
+        sidebar_background: '#ffffff',
+        selected_item_background: '#f2f5fe',
+        selected_item: '#00bcd4',
+        selected_item_border: '#00bcd4',
+    },
+    ...extras,
+};
+
+
+/**
+ * Dark Theme Object
+ */
 export const darkTheme = {
-    primary_color: '#5126fe',
-    secondary_color: '#fc2152',
-    accent_color: '#fd6b02',
-    background_color: '#e9f3fc',
-    card_background_color: '#f7fcff',
-    error_color: '#f44336',
-    primary_button_color: '#7363ff',
-    secondary_button_color: '#f8f9fa',
-    primary_text_color: '#1d2452',
-    secondary_text_color: '#9297ad',
-    divider_color: '#bdbdbd',
-    disabled_color: '#bdbdbd',
-    sidebar_item_text_color: '#9ba1b9',
-    sidebar_background_color: '#212121',
-    selected_item_background_color: '#f2f5fe',
-    selected_item_color: '#00bcd4',
-    selected_item_border_color: '#00bcd4',
-    selected_item_border_width: '1px',
-    padding: '20px',
-    padding_sm: '12px',
-    padding_xs: '8px',
-    margin: '20px',
-    margin_sm: '12px',
-    margin_xs: '8px',
-    radius: '20px',
-    radius_sm: '12px',
-    radius_xs: '8px',
-    font_size: '14px',
-    font_size_lg: '16px',
-    font_size_xl: '18px',
-    font_size_sm: '12px',
-    font_size_xs: '10px'
+    color: {
+        primary: '#5126fe',
+        secondary: '#fc2152',
+        accent: '#fd6b02',
+        background: '#e9f3fc',
+        card_background: '#f7fcff',
+        error: '#f44336',
+        primary_button: '#7363ff',
+        secondary_button: '#f8f9fa',
+        primary_text: '#1d2452',
+        secondary_text: '#9297ad',
+        menu_item_text: '#9ba1b9',
+        divider: '#bdbdbd',
+        disabled: '#bdbdbd',
+        sidebar_background: '#212121',
+        selected_item_background: '#f2f5fe',
+        selected_item: '#00bcd4',
+        selected_item_border: '#00bcd4',
+    },
+    ...extras,
 };
