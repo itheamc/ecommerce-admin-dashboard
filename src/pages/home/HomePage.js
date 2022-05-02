@@ -12,7 +12,7 @@ const HomePage = () => {
         <HomeContainer>
             <SummaryCardContainer>
                 <SummaryCard height="100px" flexDirection="row" alignItems="center" justifyContent="center">
-                    <SummaryCardIconContainer color="#f44336">
+                    <SummaryCardIconContainer>
                         <i className="ri-shopping-cart-fill"></i>
                     </SummaryCardIconContainer>
                     <SummaryCardContentContainer>
@@ -21,7 +21,7 @@ const HomePage = () => {
                     </SummaryCardContentContainer>
                 </SummaryCard>
                 <SummaryCard height="100px" flexDirection="row" alignItems="center" justifyContent="center">
-                    <SummaryCardIconContainer color="#f44336">
+                    <SummaryCardIconContainer>
                         <i className="ri-arrow-up-down-fill"></i>
                     </SummaryCardIconContainer>
                     <SummaryCardContentContainer>
@@ -30,7 +30,7 @@ const HomePage = () => {
                     </SummaryCardContentContainer>
                 </SummaryCard>
                 <SummaryCard height="100px" flexDirection="row" alignItems="center" justifyContent="center">
-                    <SummaryCardIconContainer color="#f44336">
+                    <SummaryCardIconContainer>
                         <i className="ri-user-3-fill"></i>
                     </SummaryCardIconContainer>
                     <SummaryCardContentContainer>
@@ -39,7 +39,7 @@ const HomePage = () => {
                     </SummaryCardContentContainer>
                 </SummaryCard>
                 <SummaryCard height="100px" flexDirection="row" alignItems="center" justifyContent="center">
-                    <SummaryCardIconContainer color="#f44336">
+                    <SummaryCardIconContainer>
                         <i className="ri-pie-chart-2-fill"></i>
                     </SummaryCardIconContainer>
                     <SummaryCardContentContainer>

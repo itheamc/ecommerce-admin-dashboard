@@ -40,7 +40,6 @@ export const SummaryCard = styled(Card)`
 export const SummaryCardIconContainer = styled.div`
     width: 38px;
     aspect-ratio: 1;
-    background-color: ${props => props.theme.color.divider};
     border-radius: ${props => props.theme.border_radius.medium};
     display: flex;
     justify-content: center;
@@ -50,6 +49,16 @@ export const SummaryCardIconContainer = styled.div`
     & > i {
         font-size: ${props => props.theme.font_size.large};
         color: ${props => props.theme.color.primary};
+    }
+
+    &::before {
+        content: "";
+        width: 38px;
+        position: absolute;
+        aspect-ratio: 1;
+        background-color: ${props => props.color || props.theme.color.primary};
+        border-radius: ${props => props.theme.border_radius.medium};
+        opacity: 0.10;
     }
 `;
 
