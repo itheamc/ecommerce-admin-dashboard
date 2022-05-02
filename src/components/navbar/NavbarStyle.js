@@ -79,11 +79,6 @@ export const NotificationIconContainer = styled.div`
     aspect-ratio: 1;
     border-radius: ${props => props.theme.border_radius.circular};
 
-    & > i {
-        font-size: ${props => props.theme.font_size.x_large};
-        color: ${props => props.theme.color.primary};
-    }
-
     &::before {
         content: '';
         position: absolute;
@@ -99,6 +94,11 @@ export const NotificationIconContainer = styled.div`
     &:hover {
         cursor: pointer;
     }
+
+    & > i {
+        font-size: ${props => props.theme.font_size.x_large};
+        color: ${props => props.theme.color.primary};
+    }
 `;
 
 
@@ -106,6 +106,10 @@ export const NotificationIconContainer = styled.div`
  * Profile Icon container
  */
 export const ProfileIconContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
     & > img {
         display: block;
