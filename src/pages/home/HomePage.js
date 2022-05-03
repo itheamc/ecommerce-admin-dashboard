@@ -58,8 +58,7 @@ const HomePage = () => {
             <MiddleHomeCardContainer>
                 <DailySalesCard>
                     <h2>Daily Sales</h2>
-                    <p>Today</p>
-                    <p>$1.200</p>
+                    <p>Charts will be shown here...</p>
                 </DailySalesCard>
                 <NewlyRegisteredStoreCard>
                     <div className='new-store-card-header'>
@@ -73,11 +72,16 @@ const HomePage = () => {
                     </div>
                     <div className='new-store-card-body'>
                         {
-                            [{ id: 1, name: "Arya Clothing Store", address: "Tulsipur Chowk, Ghorahi, Dang" }, { id: 2, name: "Smarty Shoes Store", address: "Traffic Chowk, Ghorahi, Dang" }, { id: 3, name: "Arohi Botique", address: "Main Road, Lamahi, Dang" }].map(item => {
+                            [
+                                { id: 1, name: "Arya Clothing Store", address: "Tulsipur Chowk, Ghorahi, Dang", image: "assets/images/users/ana.jpg" },
+                                { id: 2, name: "Smarty Shoes Store", address: "Traffic Chowk, Ghorahi, Dang", image: "assets/images/users/jack.jpg" },
+                                { id: 3, name: "Arohi Botique", address: "Main Road, Lamahi, Dang", image: "assets/images/users/john.jpg" },
+                                { id: 4, name: "Jagdamba Bastralaya", address: "Koilabas Road, Lamahi, Dang", image: "assets/images/users/jenny.jpg" }
+                            ].map(item => {
                                 return (
                                     <div className='new-store' key={item.id}>
                                         <div className='new-store-details'>
-                                            <img src="assets/images/logo.png" alt="logo" />
+                                            <img src={item.image} alt="store-logo" />
                                             <div className='new-store-title-and-address'>
                                                 <h2>{item.name}</h2>
                                                 <p>{item.address}</p>
@@ -142,8 +146,7 @@ const HomePage = () => {
                 </TopProductsListCard>
                 <CustomersCard>
                     <h2>Customers</h2>
-                    <p>Today</p>
-                    <p>3</p>
+                    <p>Customers Analytics will be shown here...</p>
                 </CustomersCard>
             </CustomersProductsCardsContainer>
         </HomeContainer>

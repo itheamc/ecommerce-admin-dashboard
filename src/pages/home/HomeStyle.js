@@ -161,9 +161,10 @@ export const NewlyRegisteredStoreCard = styled(Card)`
 
             & > div.new-store-details {
                 display: flex;
+                flex-direction: row;
                 justify-content: center;
+                align-items: center;
                 gap: ${props => props.theme.gap.medium};
-
 
                 & > img {
                     width: 30px;
@@ -175,13 +176,13 @@ export const NewlyRegisteredStoreCard = styled(Card)`
                 & > div.new-store-title-and-address {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center;
+                    justify-content: flex-start;
                     align-items: flex-start;
 
                     & > h2 {
                         font-size: ${props => props.theme.font_size.medium};
                         color: ${props => props.theme.color.primary_text};
-                        font-weight: ${props => props.theme.font_weight.regular};
+                        font-weight: ${props => props.theme.font_weight.medium};
                     }
 
                     & > p {
