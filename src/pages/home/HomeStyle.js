@@ -119,6 +119,87 @@ export const NewlyRegisteredStoreCard = styled(Card)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    & > div.new-store-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        & > div.new-store-title {
+
+            & > h2 {
+                font-size: ${props => props.theme.font_size.x_large};
+                color: ${props => props.theme.color.primary_text};
+            }
+
+            & > p {
+                font-size: ${props => props.theme.font_size.small};
+                color: ${props => props.theme.color.secondary_text};
+            }
+        }
+
+        & > div.new-store-header-action {
+            & > i {
+                cursor: pointer;
+            }
+        }
+    }
+
+    & > div.new-store-card-body {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        & > div.new-store {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: ${props => props.theme.border_width.x_small} solid ${props => props.theme.color.divider};
+            padding: ${props => props.theme.padding.x_small} 0;
+
+            & > div.new-store-details {
+                display: flex;
+                justify-content: center;
+                gap: ${props => props.theme.gap.medium};
+
+
+                & > img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: ${props => props.theme.border_radius.circular};
+                    object-fit: cover;
+                }
+
+                & > div.new-store-title-and-address {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+
+                    & > h2 {
+                        font-size: ${props => props.theme.font_size.medium};
+                        color: ${props => props.theme.color.primary_text};
+                        font-weight: ${props => props.theme.font_weight.regular};
+                    }
+
+                    & > p {
+                        font-size: ${props => props.theme.font_size.x_small};
+                        color: ${props => props.theme.color.secondary_text};
+                    }
+                }
+            }
+
+            & > i {
+                font-size: ${props => props.theme.font_size.xxx_large};
+                color: ${props => props.theme.color.secondary_text};
+                cursor: pointer;
+            }
+        }
+
+    }
+
 `
 
 
@@ -141,17 +222,28 @@ export const TopProductsListCard = styled(Card)`
     align-items: center;
     justify-content: flex-start;
 
-    & div.top-products-list-card-header {
+    & > div.top-products-list-card-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         padding: 0 ${props => props.theme.padding.medium} 0 0;
 
-        & div.top-products-list-card-header-title {
+        & > div.top-products-list-card-header-title {
+            & > h2 {
+                font-size: ${props => props.theme.font_size.x_large};
+                color: ${props => props.theme.color.primary_text};
+            }
+
             & > p {
-                color: ${props => props.theme.color.secondary_text};
                 font-size: ${props => props.theme.font_size.small};
+                color: ${props => props.theme.color.secondary_text};
+            }
+        }
+
+        & > div.top-products-list-card-header-action {
+            & > i {
+                cursor: pointer;
             }
         }
     }

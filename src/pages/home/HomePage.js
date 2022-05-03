@@ -62,9 +62,33 @@ const HomePage = () => {
                     <p>$1.200</p>
                 </DailySalesCard>
                 <NewlyRegisteredStoreCard>
-                    <h2>Store Registered</h2>
-                    <p>Today</p>
-                    <p>3</p>
+                    <div className='new-store-card-header'>
+                        <div className='new-store-title'>
+                            <h2>New Stores</h2>
+                            <p>Recently added stores.</p>
+                        </div>
+                        <div className='new-store-header-action'>
+                            <i className="ri-arrow-right-up-line"></i>
+                        </div>
+                    </div>
+                    <div className='new-store-card-body'>
+                        {
+                            [{id: 1, name: "Arya Clothing Store", address: "Tulsipur Chowk, Ghorahi, Dang"}, {id: 2, name: "Smarty Shoes Store", address: "Traffic Chowk, Ghorahi, Dang"}, {id: 3, name: "Arohi Botique", address: "Main Road, Lamahi, Dang"}].map(item => {
+                                return (
+                                    <div className='new-store' key={item.id}>
+                                        <div className='new-store-details'>
+                                            <img src="assets/images/logo.png" alt="logo" />
+                                            <div className='new-store-title-and-address'>
+                                                <h2>{ item.name }</h2>
+                                                <p>{ item.address }</p>
+                                            </div>
+                                        </div>
+                                        <i className='ri-arrow-drop-right-line'></i>
+                                    </div>
+                                );
+                            })
+                        }
+                    </div>
                 </NewlyRegisteredStoreCard>
             </MiddleHomeCardContainer>
             <CustomersProductsCardsContainer>
