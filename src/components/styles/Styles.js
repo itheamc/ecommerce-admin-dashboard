@@ -13,7 +13,6 @@ export const Table = styled.table`
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    border: 1px solid ${props => props.theme.color.primary};
     border-radius: ${props => props.theme.border_radius.medium};
     overflow: hidden;
     gap: ${props => props.theme.gap.medium};
