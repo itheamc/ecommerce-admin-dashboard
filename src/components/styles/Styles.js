@@ -13,16 +13,15 @@ export const Table = styled.table`
     width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
-    border-radius: ${props => props.theme.border_radius.medium};
     overflow: hidden;
-    gap: ${props => props.theme.gap.medium};
-    padding: 0 ${props => props.theme.padding.medium};
 
     & > thead {
         & > tr {
             & > th {
                 text-align: left;
-                color: ${props => props.theme.color.secondary_text};
+                color: ${props => props.theme.color.primary_text};
+                font-size: ${props => props.theme.font_size.medium};
+                padding: ${props => props.theme.padding.small} 0;
             }
         }
     }
@@ -38,8 +37,10 @@ export const Table = styled.table`
                 font-size: ${props => props.theme.font_size.small};
 
                 & > div {
+                    width: max-content;
                     display: flex;
-                    justify-content: left;
+                    flex-direction: row;
+                    justify-content: flex-start;
                     align-items: center;
                     gap: ${props => props.theme.gap.medium};
 
