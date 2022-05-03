@@ -51,7 +51,7 @@ const extras = {
         x_large: '8px',
     },
     gap: {
-        xX_small: '4px',
+        xx_small: '4px',
         x_small: '8px',
         small: '12px',
         medium: '16px',
@@ -78,7 +78,7 @@ export const lightTheme = {
         primary_text: '#1d2452',
         secondary_text: '#9297ad',
         menu_item_text: '#9ba1b9',
-        divider: '#e6e6e6',
+        divider: '#e6e6e693',
         disabled: '#bdbdbd',
         nav_background: '#e9f3fc',
         sidebar_background: '#ffffff',
