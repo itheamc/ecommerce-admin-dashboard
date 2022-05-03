@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 /**
  * Menu Header Container
  */
- export const MenuHeaderContainer = styled.div`
+export const MenuHeaderContainer = styled.div`
  height: 100px;
  width: 100%;
  display: flex;
@@ -73,7 +73,7 @@ export const MenuItemLink = styled(NavLink)`
     text-decoration: none;
     padding: ${props => props.theme.padding.medium || "20px"};
     transition: all 0.35s ease-in-out;
-    cussor: pointer;
+    cursor: pointer;
 
     &:hover {
         color: ${props => props.theme.color.primary};
@@ -92,6 +92,7 @@ export const MenuItemLink = styled(NavLink)`
 
     & > span {
         color: ${props => props.selected ? props.theme.color.primary : props.theme.color.menu_item_text};
+        font-weight: ${props => props.selected ? props.theme.font_weight.medium : props.theme.font_weight.regular};
         font-size: ${props => props.theme.font_size.large};
     }
 
@@ -106,7 +107,7 @@ export const MenuItemLink = styled(NavLink)`
         transition: all 0.35s ease-in-out;
     }
 `
-    
+
 
 export const SecondaryMenuItems = styled.ul`
  width: 100%;
