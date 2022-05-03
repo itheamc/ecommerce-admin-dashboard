@@ -30,12 +30,12 @@ export const Table = styled.table`
     & > tbody {
 
         & > tr {
+            border-bottom: ${props => props.theme.border_width.small} solid ${props => props.theme.color.divider};
 
             & > td {
                 justify-content: center;
                 padding: ${props => props.theme.padding.x_small} 0;
                 font-size: ${props => props.theme.font_size.small};
-                border-bottom: 1px solid ${props => props.theme.color.divider};
 
                 & > div {
                     display: flex;
