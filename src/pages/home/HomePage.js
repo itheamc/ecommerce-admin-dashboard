@@ -75,7 +75,7 @@ const HomePage = () => {
                             <p>Best selling products in your store</p>
                         </div>
                         <div className='top-products-list-card-header-action'>
-                            <i class="ri-arrow-right-up-line"></i>
+                            <i className="ri-arrow-right-up-line"></i>
                         </div>
                     </div>
                     <Table>
@@ -93,21 +93,21 @@ const HomePage = () => {
                                     <span>Wireless HeadPhone</span></div></td>
                                 <td>12/12/2022</td>
                                 <td>$100</td>
-                                <td><i class="ri-more-2-fill"></i></td>
+                                <td><i className="ri-more-2-fill"></i></td>
                             </tr>
                             <tr>
                                 <td><div><img src="assets/images/pos.png" alt="wireless-earpods" />
                                     <span>Wireless Earpods</span></div></td>
                                 <td>12/12/2022</td>
                                 <td>$50</td>
-                                <td><i class="ri-more-2-fill"></i></td>
+                                <td><i className="ri-more-2-fill"></i></td>
                             </tr>
                             <tr>
                                 <td><div><img src="assets/images/shoe.jpg" alt="converse-shoe" />
                                     <span>Converse Shoe</span></div></td>
                                 <td>12/12/2022</td>
                                 <td>$15</td>
-                                <td><i class="ri-more-2-fill"></i></td>
+                                <td><i className="ri-more-2-fill"></i></td>
                             </tr>
                         </tbody>
                     </Table>
