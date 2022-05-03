@@ -3,7 +3,8 @@
  */
 const extras = {
     font_size: {
-        x_small: '8px',
+        xx_small: '8px',
+        x_small: '10px',
         small: '12px',
         medium: '14px',
         large: '16px',
@@ -19,6 +20,7 @@ const extras = {
         bolder: '900'
     },
     padding: {
+        xx_small: '4px',
         x_small: '8px',
         small: '12px',
         medium: '16px',
@@ -27,6 +29,7 @@ const extras = {
         xx_large: '48px'
     },
     margin: {
+        xx_small: '4px',
         x_small: '8px',
         small: '12px',
         medium: '16px',
