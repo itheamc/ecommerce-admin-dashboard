@@ -41,7 +41,7 @@ export const MenuItemsContainer = styled.div`
  display: flex;
  flex-direction: column;
  align-items: flex-start;
- justify-content: flex-start;
+ justify-content: space-between;
 `
 
 export const PrimaryMenuItems = styled.ul`
@@ -85,7 +85,7 @@ export const MenuItemLink = styled(NavLink)`
     }
 
     & > i {
-        margin-right: ${props => props.theme.padding.small};
+        margin-right: ${props => props.theme.margin.small};
         color: ${props => props.selected ? props.theme.color.primary : props.theme.color.menu_item_text};
         font-size: ${props => props.theme.font_size.large};
     }

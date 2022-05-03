@@ -8,7 +8,8 @@ import {
   MenuItemsContainer,
   PrimaryMenuItems,
   MenuItem,
-  MenuItemLink
+  MenuItemLink,
+  SecondaryMenuItems
 } from './SideNavMenuStyle.js'
 
 const SideNavMenu = () => {
@@ -68,6 +69,14 @@ const SideNavMenu = () => {
             </MenuItemLink>
           </MenuItem>
         </PrimaryMenuItems>
+        <SecondaryMenuItems>
+          <MenuItem>
+            <MenuItemLink to="/settings">
+              <i className="ri-logout-circle-r-line"></i>
+              <span>Logout</span>
+            </MenuItemLink>
+          </MenuItem>
+        </SecondaryMenuItems>
       </MenuItemsContainer>
     </>
   )

@@ -9,7 +9,7 @@ export const NavContainer = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: ${props => props.theme.padding.medium};
+    padding: ${props => props.theme.padding.large} ${props => props.theme.padding.medium};
     background-color: ${props => props.theme.color.nav_background};
 `;
 
@@ -21,7 +21,6 @@ export const TitleContainer = styled.div`
     flex-direction: column;
     align-items: felx-start;
     justify-content: center;
-    margin-left: ${props => props.theme.padding.medium};
 
     & > h2 {
         font-size: ${props => props.theme.font_size.x_large};
@@ -43,7 +42,7 @@ export const NavContentContainer = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 2rem;
+    gap: ${props => props.theme.gap.medium};
 `;
 
 
@@ -56,7 +55,7 @@ export const SearchContainer = styled.div`
     align-items: center;
     border: none;
     border-radius: ${props => props.theme.border_radius.xx_large};
-    gap: 0.5rem;
+    gap: ${props => props.theme.gap.x_small};
     padding: calc(${props => props.theme.padding.x_small} + 2px) ${props => props.theme.padding.medium};
     background-color: #fff;
 
@@ -87,7 +86,7 @@ export const NotificationIconContainer = styled.div`
         width: 5px;
         height: 5px;
         border-radius: ${props => props.theme.border_radius.circular};
-        border: 2px solid #fff;
+        border: ${props => props.theme.border_width.medium} solid #fff;
         background-color: ${props => props.theme.color.primary};
     }
 

@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Card } from '../../components/styles/CardStyle.js';
+import { Card } from '../../components/styles/Styles.js';
 
 /**
  * Home Container
@@ -8,9 +8,12 @@ export const HomeContainer = styled.div`
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-evenly;
+    padding: 0 0 ${props => props.theme.padding.medium} 0;
+    gap: ${props => props.theme.gap.medium};
+
 `;
 
 
@@ -21,8 +24,8 @@ export const SummaryCardContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    gap: 1.2rem;
-    padding: ${props => props.theme.padding.medium};
+    gap: ${props => props.theme.gap.medium};
+    padding: 0 ${props => props.theme.padding.medium};
 `
 
 
@@ -30,7 +33,13 @@ export const SummaryCardContainer = styled.div`
  * Summary Card
  */
 export const SummaryCard = styled(Card)`
-    gap: 1.2rem;
+    flex: 1;
+    height: 100px;
+    gap: ${props => props.theme.gap.medium};
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 `;
 
 
@@ -83,3 +92,79 @@ export const SummaryCardContentContainer = styled.div`
         color: ${props => props.theme.color.primary};
     }
 `;
+
+export const MiddleHomeCardContainer = styled.div`
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: ${props => props.theme.gap.medium};
+    padding: 0 ${props => props.theme.padding.medium};
+`;
+
+export const DailySalesCard = styled(Card)`
+    flex: 2;
+    gap: ${props => props.theme.gap.medium};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
+export const NewlyRegisteredStoreCard = styled(Card)`
+    flex: 1;
+    gap: ${props => props.theme.gap.medium};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
+
+export const CustomersProductsCardsContainer = styled.div`
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: ${props => props.theme.gap.medium};
+    padding: 0 ${props => props.theme.padding.medium};
+`
+export const TopProductsListCard = styled(Card)`
+    height: 100%;
+    flex: 2;
+    gap: ${props => props.theme.gap.medium};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    & div.top-products-list-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 ${props => props.theme.padding.medium} 0 0;
+
+        & div.top-products-list-card-header-title {
+            & > p {
+                color: ${props => props.theme.color.secondary_text};
+                font-size: ${props => props.theme.font_size.small};
+            }
+        }
+    }
+
+`
+
+export const CustomersCard = styled(Card)`
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: ${props => props.theme.gap.medium};
+
+`

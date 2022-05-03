@@ -35,6 +35,7 @@ const extras = {
         xx_large: '48px'
     },
     border_radius: {
+        x_small: '2px',
         small: '4px',
         medium: '8px',
         large: '16px',
@@ -43,11 +44,21 @@ const extras = {
         circular: '50%'
     },
     border_width: {
+        x_small: '0.5px',
         small: '1px',
         medium: '2px',
         large: '4px',
         x_large: '8px',
     },
+    gap: {
+        xX_small: '4px',
+        x_small: '8px',
+        small: '12px',
+        medium: '16px',
+        large: '24px',
+        x_large: '32px',
+        xx_large: '48px'
+    }
 };
 
 
