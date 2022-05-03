@@ -73,14 +73,14 @@ const HomePage = () => {
                     </div>
                     <div className='new-store-card-body'>
                         {
-                            [{id: 1, name: "Arya Clothing Store", address: "Tulsipur Chowk, Ghorahi, Dang"}, {id: 2, name: "Smarty Shoes Store", address: "Traffic Chowk, Ghorahi, Dang"}, {id: 3, name: "Arohi Botique", address: "Main Road, Lamahi, Dang"}].map(item => {
+                            [{ id: 1, name: "Arya Clothing Store", address: "Tulsipur Chowk, Ghorahi, Dang" }, { id: 2, name: "Smarty Shoes Store", address: "Traffic Chowk, Ghorahi, Dang" }, { id: 3, name: "Arohi Botique", address: "Main Road, Lamahi, Dang" }].map(item => {
                                 return (
                                     <div className='new-store' key={item.id}>
                                         <div className='new-store-details'>
                                             <img src="assets/images/logo.png" alt="logo" />
                                             <div className='new-store-title-and-address'>
-                                                <h2>{ item.name }</h2>
-                                                <p>{ item.address }</p>
+                                                <h2>{item.name}</h2>
+                                                <p>{item.address}</p>
                                             </div>
                                         </div>
                                         <i className='ri-arrow-drop-right-line'></i>
@@ -106,8 +106,9 @@ const HomePage = () => {
                         <thead>
                             <tr>
                                 <th>Products</th>
-                                <th>Date added</th>
                                 <th>Price</th>
+                                <th>Total Sold</th>
+                                <th>Date added</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -115,22 +116,25 @@ const HomePage = () => {
                             <tr>
                                 <td><div><img src="assets/images/R.jpg" alt="wireless-headphone" />
                                     <span>Wireless HeadPhone</span></div></td>
-                                <td>12/12/2022</td>
                                 <td>$100</td>
+                                <td>9500</td>
+                                <td>12/12/2022</td>
                                 <td><i className="ri-more-2-fill"></i></td>
                             </tr>
                             <tr>
                                 <td><div><img src="assets/images/pos.png" alt="wireless-earpods" />
                                     <span>Wireless Earpods</span></div></td>
+                                <td>$10</td>
+                                <td>7400</td>
                                 <td>12/12/2022</td>
-                                <td>$50</td>
                                 <td><i className="ri-more-2-fill"></i></td>
                             </tr>
                             <tr>
                                 <td><div><img src="assets/images/shoe.jpg" alt="converse-shoe" />
                                     <span>Converse Shoe</span></div></td>
-                                <td>12/12/2022</td>
                                 <td>$15</td>
+                                <td>4500</td>
+                                <td>12/12/2022</td>
                                 <td><i className="ri-more-2-fill"></i></td>
                             </tr>
                         </tbody>

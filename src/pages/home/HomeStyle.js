@@ -118,7 +118,7 @@ export const NewlyRegisteredStoreCard = styled(Card)`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     & > div.new-store-card-header {
         display: flex;
