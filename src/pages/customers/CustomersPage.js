@@ -1,63 +1,63 @@
 import React from 'react'
 import {
-    OrdersContainer,
-    OrdersTableCard,
-    OrdersTable
-} from './OrderStyle.js'
+    CustomersContainer,
+    CustomersTableCard,
+    CustomersTable
+} from './CustomersStyle'
 
-const OrdersPage = () => {
+const CustomersPage = () => {
     return (
-        <OrdersContainer>
-            <OrdersTableCard>
-                <div className='orders-card-header'>
-                    <h2>Orders</h2>
-                    <p>List of orders from the customers</p>
+        <CustomersContainer>
+            <CustomersTableCard>
+                <div className='customers-card-header'>
+                    <h2>Customers</h2>
+                    <p>List of registered customers</p>
                 </div>
-                <OrdersTable>
+                <CustomersTable>
                     <thead>
                         <tr>
                             <th>S.N.</th>
-                            <th>Order No.</th>
-                            <th>Items</th>
-                            <th>Store</th>
-                            <th>Delivery Address</th>
-                            <th>Date</th>
+                            <th>Customer Id</th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Address</th>
                             <th>Status</th>
-                            <th>Total</th>
+                            <th>Registered On</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map(item => {
+                            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(item => {
                                 return (
                                     <tr key={item}>
                                         <td>
                                             <span>#{item}</span>
                                         </td>
                                         <td>
-                                            <span id='order-number'>0105010{item}</span>
+                                            <span id='customer-id'>01201{item}</span>
                                         </td>
                                         <td>
                                             <div>
-                                                <img src="https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" />
-                                                <span id='item-name'>Product {item} Name</span>
+                                                <img src="assets/images/users/ana.jpg" alt="user-icon" />
+                                                <span id='customer-name'>Customer {item} Name</span>
                                             </div>
                                         </td>
                                         <td>
-                                            <span>Store {item}</span>
+                                            <span>+977-9876543210</span>
                                         </td>
                                         <td>
-                                            <span>Chailahi, Lamahi, Dang</span>
+                                            <span>customer{item}@email.com</span>
+                                        </td>
+                                        <td>
+                                            <span>Gadhawa-7 Kanchhi Gaun</span>
+                                        </td>
+                                        <td>
+                                            <span id='status'>Active</span>
                                         </td>
                                         <td>
                                             <span>2022-03-23</span>
-                                        </td>
-                                        <td>
-                                            <span id='status'>Pending</span>
-                                        </td>
-                                        <td>
-                                            <span>$20</span>
                                         </td>
                                         <td>
                                             <i className="ri-more-2-fill"></i>
@@ -67,10 +67,10 @@ const OrdersPage = () => {
                             })
                         }
                     </tbody>
-                </OrdersTable>
-            </OrdersTableCard>
-        </OrdersContainer>
+                </CustomersTable>
+            </CustomersTableCard>
+        </CustomersContainer>
     )
 }
 
-export default OrdersPage
+export default CustomersPage

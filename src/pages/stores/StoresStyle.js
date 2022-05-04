@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Card, Table } from '../../components/styles/Styles';
 
 
-export const OrdersContainer = styled.div`
+export const StoresContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -12,12 +12,12 @@ export const OrdersContainer = styled.div`
     overflow-y: hidden;
 `
 
-export const OrdersTableCard = styled(Card)`
+export const StoresTableCard = styled(Card)`
     flex: 1;
     width: 100%;
     overflow-y: hidden;
 
-    & > div.orders-card-header {
+    & > div.stores-card-header {
         gap: ${props => props.theme.gap.medium};
         margin-bottom: ${props => props.theme.padding.medium};
 
@@ -32,7 +32,7 @@ export const OrdersTableCard = styled(Card)`
     }
 `
 
-export const OrdersTable = styled(Table)`
+export const StoresTable = styled(Table)`
 
     & > tbody {
 
@@ -55,12 +55,20 @@ export const OrdersTable = styled(Table)`
                         object-fit: cover;
                     }
 
-                    & > span#item-name {
+                    & > span#store-name {
                         font-weight: ${props => props.theme.font_weight.regular};
+                    }
+
+                    & > i {
+                        color: ${props => props.theme.color.accent};
+                        background-color: ${props => props.theme.color.divider};
+                        border-radius: ${props => props.theme.border_radius.circular};
+                        padding: ${props => props.theme.padding.xx_small};
+                        cursor: pointer;
                     }
                 }
 
-                & > span#order-number {
+                & > span#store-id {
                     cursor: pointer;
 
                     &:hover {

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Card, Table } from '../../components/styles/Styles';
 
 
-export const OrdersContainer = styled.div`
+export const CustomersContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -12,12 +12,12 @@ export const OrdersContainer = styled.div`
     overflow-y: hidden;
 `
 
-export const OrdersTableCard = styled(Card)`
+export const CustomersTableCard = styled(Card)`
     flex: 1;
     width: 100%;
     overflow-y: hidden;
 
-    & > div.orders-card-header {
+    & > div.customers-card-header {
         gap: ${props => props.theme.gap.medium};
         margin-bottom: ${props => props.theme.padding.medium};
 
@@ -32,7 +32,7 @@ export const OrdersTableCard = styled(Card)`
     }
 `
 
-export const OrdersTable = styled(Table)`
+export const CustomersTable = styled(Table)`
 
     & > tbody {
 
@@ -55,12 +55,12 @@ export const OrdersTable = styled(Table)`
                         object-fit: cover;
                     }
 
-                    & > span#item-name {
+                    & > span#customer-name {
                         font-weight: ${props => props.theme.font_weight.regular};
                     }
                 }
 
-                & > span#order-number {
+                & > span#customer-id {
                     cursor: pointer;
 
                     &:hover {

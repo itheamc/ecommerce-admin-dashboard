@@ -33,9 +33,11 @@ const ProductsPage = () => {
                             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(product => {
                                 return (
                                     <tr key={product}>
-                                        <td>{product}</td>
                                         <td>
-                                            <span id='product-id'>#0000{product}</span>
+                                            <span>#{product}</span>
+                                        </td>
+                                        <td>
+                                            <span id='product-id'>0102030{product}</span>
                                         </td>
                                         <td>
                                             <div>
@@ -43,14 +45,22 @@ const ProductsPage = () => {
                                                 <span id='product-name'>Wireless HeadPhone</span>
                                             </div>
                                         </td>
-                                        <td>E001010{product}</td>
-                                        <td>Electronics</td>
-                                        <td>$100</td>
-                                        <td>Store {product}</td>
+                                        <td>
+                                            <span>E001010{product}</span>
+                                        </td>
+                                        <td>
+                                            <span>Electronics</span>
+                                        </td>
+                                        <td>
+                                            <span>$100</span>
+                                        </td>
+                                        <td>
+                                            <span>Store {product}</span>
+                                        </td>
                                         <td>
                                             <span id='status'>Active</span>
                                         </td>
-                                        <td>2022-03-23</td>
+                                        <td><span></span>2022-03-23</td>
                                         <td>
                                             <i className="ri-more-2-fill"></i>
                                         </td>
