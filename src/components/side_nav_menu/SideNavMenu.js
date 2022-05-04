@@ -33,7 +33,7 @@ const SideNavMenu = () => {
             </MenuItemLink>
           </MenuItem>
           <MenuItem>
-            <MenuItemLink to="/orders" selected={selected === 1} onClick={() => setSelected(1)}>
+            <MenuItemLink to="/stores" selected={selected === 1} onClick={() => setSelected(1)}>
               <i className="ri-store-3-line"></i>
               <span>Stores</span>
             </MenuItemLink>

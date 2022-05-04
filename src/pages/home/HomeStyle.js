@@ -5,15 +5,14 @@ import { Card } from '../../components/styles/Styles.js';
  * Home Container
  */
 export const HomeContainer = styled.div`
-    height: 100%;
     width: 100%;
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
     padding: 0 0 ${props => props.theme.padding.medium} 0;
     gap: ${props => props.theme.gap.medium};
-
 `;
 
 
@@ -94,7 +93,6 @@ export const SummaryCardContentContainer = styled.div`
 `;
 
 export const MiddleHomeCardContainer = styled.div`
-    flex: 1;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -205,7 +203,6 @@ export const NewlyRegisteredStoreCard = styled(Card)`
 
 
 export const CustomersProductsCardsContainer = styled.div`
-    flex: 1;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -222,6 +219,7 @@ export const TopProductsListCard = styled(Card)`
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    padding-bottom: 1.5rem;
 
     & > div.top-products-list-card-header {
         display: flex;

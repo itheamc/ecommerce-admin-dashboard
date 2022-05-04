@@ -20,6 +20,7 @@ const extras = {
         bolder: '900'
     },
     padding: {
+        xxx_small: '2px',
         xx_small: '4px',
         x_small: '8px',
         small: '12px',
@@ -29,6 +30,7 @@ const extras = {
         xx_large: '48px'
     },
     margin: {
+        xxx_small: '2px',
         xx_small: '4px',
         x_small: '8px',
         small: '12px',
@@ -54,6 +56,7 @@ const extras = {
         x_large: '8px',
     },
     gap: {
+        xxx_small: '2px',
         xx_small: '4px',
         x_small: '8px',
         small: '12px',
@@ -61,6 +64,12 @@ const extras = {
         large: '24px',
         x_large: '32px',
         xx_large: '48px'
+    },
+    scrollbar_width: {
+        x_small: '4px',
+        small: '6px',
+        medium: '8px',
+        large: '10px',
     }
 };
 
