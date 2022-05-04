@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Routes } from 'react-router-dom';
 
 /**
   * Main Container
@@ -12,6 +13,7 @@ export const MainContainer = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   background-color: ${props => props.theme.color.background};
+  overflow-y: hidden;
 `
 
 
@@ -20,7 +22,7 @@ export const MainContainer = styled.div`
   */
 export const SideMenuContainer = styled.div`
   flex: 1;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -34,10 +36,27 @@ export const SideMenuContainer = styled.div`
   */
 export const ContentContainer = styled.div`
   flex: 6;
-  height: 100%;
+  height: 100vh;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-`
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 
+  &::-webkit-scrollbar {
+    width: ${props => props.theme.scrollbar_width.small};
+    border-radius: ${props => props.theme.border_radius.medium};
+  }
+
+  &::-webkit-scrollbar-track {
+    background: ${props => props.theme.color.divider};
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: ${props => props.theme.scrollbar_width.x_small};
+    background: ${props => props.theme.color.secondary_text};
+    border-radius: ${props => props.theme.border_radius.medium};
+  }
+`
