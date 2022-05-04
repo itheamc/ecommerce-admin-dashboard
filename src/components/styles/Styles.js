@@ -50,7 +50,46 @@ export const Table = styled.table`
                         border-radius: ${props => props.theme.border_radius.circular};
                         object-fit: cover;
                     }
-                }  
+                }
+                
+                & > span.order-number {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: ${props => props.theme.color.primary_text};
+                        text-decoration: underline;
+                        font-weight: bold;
+                    }
+                }
+
+                & > i {
+                    cursor: pointer;
+                }
+                & > div {
+                    & > i {
+                        color: ${props => props.theme.color.accent};
+                        background-color: ${props => props.theme.color.divider};
+                        border-radius: ${props => props.theme.border_radius.circular};
+                        padding: 5px;
+                        cursor: pointer;
+                    }
+                }
+
+                & > p.status {
+                    width: max-content;
+                    color: ${props => props.theme.color.accent};
+                    background-color: ${props => props.theme.color.divider};
+                    border-radius: ${props => props.theme.border_radius.large};
+                    padding: ${props => props.theme.padding.xxx_small} ${props => props.theme.padding.small};
+                }
+
+                & > p.active {
+                    width: max-content;
+                    color: white;
+                    background-color: lightgreen;
+                    border-radius: ${props => props.theme.border_radius.large};
+                    padding: ${props => props.theme.padding.xxx_small} ${props => props.theme.padding.small};
+                }
             }
         }
     }
