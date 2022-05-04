@@ -22,8 +22,8 @@ const CustomersPage = () => {
                             <th>Phone</th>
                             <th>Email</th>
                             <th>Address</th>
+                            <th>Joined On</th>
                             <th>Status</th>
-                            <th>Registered On</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -54,10 +54,10 @@ const CustomersPage = () => {
                                             <span>Gadhawa-7 Kanchhi Gaun</span>
                                         </td>
                                         <td>
-                                            <span id='status'>Active</span>
+                                            <span>2022-03-23</span>
                                         </td>
                                         <td>
-                                            <span>2022-03-23</span>
+                                            <span id='status'>Active</span>
                                         </td>
                                         <td>
                                             <i className="ri-more-2-fill"></i>

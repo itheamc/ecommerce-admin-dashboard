@@ -60,9 +60,8 @@ export const ProductsTable = styled(Table)`
                     cursor: pointer;
 
                     &:hover {
-                        color: ${props => props.theme.color.primary_text};
+                        color: ${props => props.theme.color.primary};
                         text-decoration: underline;
-                        font-weight: bold;
                     }
                 }
 

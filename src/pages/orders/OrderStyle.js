@@ -62,11 +62,11 @@ export const OrdersTable = styled(Table)`
 
                 & > span#order-number {
                     cursor: pointer;
+                    transition: all 0.3s linear;
 
                     &:hover {
-                        color: ${props => props.theme.color.primary_text};
+                        color: ${props => props.theme.color.primary};
                         text-decoration: underline;
-                        font-weight: bold;
                     }
                 }
 

@@ -20,10 +20,10 @@ const OrdersPage = () => {
                             <th>Order No.</th>
                             <th>Items</th>
                             <th>Store</th>
-                            <th>Delivery Address</th>
-                            <th>Date</th>
+                            <th>Customer</th>
+                            <th>Ordered On</th>
+                            <th>Amount</th>
                             <th>Status</th>
-                            <th>Total</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -48,16 +48,16 @@ const OrdersPage = () => {
                                             <span>Store {item}</span>
                                         </td>
                                         <td>
-                                            <span>Chailahi, Lamahi, Dang</span>
+                                            <span>Customer { item }</span>
                                         </td>
                                         <td>
                                             <span>2022-03-23</span>
                                         </td>
                                         <td>
-                                            <span id='status'>Pending</span>
+                                            <span>$20</span>
                                         </td>
                                         <td>
-                                            <span>$20</span>
+                                            <span id='status'>Pending</span>
                                         </td>
                                         <td>
                                             <i className="ri-more-2-fill"></i>

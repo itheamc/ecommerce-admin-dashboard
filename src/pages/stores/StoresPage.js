@@ -22,8 +22,8 @@ const StoresPage = () => {
                             <th>Phone</th>
                             <th>Email</th>
                             <th>Address</th>
-                            <th>Status</th>
                             <th>Joined On</th>
+                            <th>Status</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -57,10 +57,10 @@ const StoresPage = () => {
                                             </div>
                                         </td>
                                         <td>
-                                            <span id='status'>Active</span>
+                                            <span>2022-03-23</span>
                                         </td>
                                         <td>
-                                            <span>2022-03-23</span>
+                                            <span id='status'>Active</span>
                                         </td>
                                         <td>
                                             <i className="ri-more-2-fill"></i>
