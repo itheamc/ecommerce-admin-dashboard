@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { Card } from '../../components/styles/Styles.js';
+import { Card, Table } from '../../components/styles/Styles.js';
 
 /**
  * Home Container
@@ -247,6 +247,32 @@ export const TopProductsListCard = styled(Card)`
         }
     }
 
+`
+
+export const TopProductsTable = styled(Table)`
+    & > tbody {
+
+        & > tr {
+
+            & > td {
+                & > div {
+                    width: max-content;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: ${props => props.theme.gap.medium};
+
+                    & > img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: ${props => props.theme.border_radius.circular};
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
 `
 
 export const CustomersCard = styled(Card)`

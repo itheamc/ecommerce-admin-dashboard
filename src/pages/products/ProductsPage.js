@@ -2,8 +2,8 @@ import React from 'react'
 import {
     ProductsContainer,
     ProductsCard,
+    ProductsTable
 } from './ProductStyle'
-import { Table } from '../../components/styles/Styles.js'
 
 const ProductsPage = () => {
     return (
@@ -13,7 +13,7 @@ const ProductsPage = () => {
                     <h2>Products</h2>
                     <p>List of products from all stores</p>
                 </div>
-                <Table>
+                <ProductsTable>
                     <thead>
                         <tr>
                             <th>S.N.</th>
@@ -34,29 +34,33 @@ const ProductsPage = () => {
                                 return (
                                     <tr key={product}>
                                         <td>{product}</td>
-                                        <td>#0000{product}</td>
+                                        <td>
+                                            <span id='product-id'>#0000{product}</span>
+                                        </td>
                                         <td>
                                             <div>
                                                 <img src="assets/images/R.jpg" alt="Wireless headphone" />
-                                                <div>
-                                                    <p>Wireless HeadPhone</p>
-                                                </div>
+                                                <span id='product-name'>Wireless HeadPhone</span>
                                             </div>
                                         </td>
-                                        <td>#000{product}</td>
+                                        <td>E001010{product}</td>
                                         <td>Electronics</td>
                                         <td>$100</td>
                                         <td>Store {product}</td>
-                                        <td><p className='active'>Active</p></td>
+                                        <td>
+                                            <span id='status'>Active</span>
+                                        </td>
                                         <td>2022-03-23</td>
-                                        <td><i className="ri-more-2-fill"></i></td>
+                                        <td>
+                                            <i className="ri-more-2-fill"></i>
+                                        </td>
                                     </tr>
                                 )
                             })
                         }
-                        
+
                     </tbody>
-                </Table>
+                </ProductsTable>
             </ProductsCard>
         </ProductsContainer>
     )

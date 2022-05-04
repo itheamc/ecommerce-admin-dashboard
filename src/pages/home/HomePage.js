@@ -10,9 +10,9 @@ import {
     NewlyRegisteredStoreCard,
     CustomersProductsCardsContainer,
     TopProductsListCard,
+    TopProductsTable,
     CustomersCard
 } from './HomeStyle.js'
-import { Table } from '../../components/styles/Styles.js'
 
 const HomePage = () => {
     return (
@@ -106,7 +106,7 @@ const HomePage = () => {
                             <i className="ri-arrow-right-up-line"></i>
                         </div>
                     </div>
-                    <Table>
+                    <TopProductsTable>
                         <thead>
                             <tr>
                                 <th>Products</th>
@@ -118,31 +118,49 @@ const HomePage = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td><div><img src="assets/images/R.jpg" alt="wireless-headphone" />
-                                    <span>Wireless HeadPhone</span></div></td>
+                                <td>
+                                    <div>
+                                        <img src="assets/images/R.jpg" alt="wireless-headphone" />
+                                        <span>Wireless HeadPhone</span>
+                                    </div>
+                                </td>
                                 <td>$100</td>
                                 <td>9500</td>
                                 <td>12/12/2022</td>
-                                <td><i className="ri-more-2-fill"></i></td>
+                                <td>
+                                    <i className="ri-more-2-fill"></i>
+                                </td>
                             </tr>
                             <tr>
-                                <td><div><img src="assets/images/pos.png" alt="wireless-earpods" />
-                                    <span>Wireless Earpods</span></div></td>
+                                <td>
+                                    <div>
+                                        <img src="assets/images/pos.png" alt="wireless-earpods" />
+                                        <span>Wireless Earpods</span>
+                                    </div>
+                                </td>
                                 <td>$10</td>
                                 <td>7400</td>
                                 <td>12/12/2022</td>
-                                <td><i className="ri-more-2-fill"></i></td>
+                                <td>
+                                    <i className="ri-more-2-fill"></i>
+                                </td>
                             </tr>
                             <tr>
-                                <td><div><img src="assets/images/shoe.jpg" alt="converse-shoe" />
-                                    <span>Converse Shoe</span></div></td>
+                                <td>
+                                    <div>
+                                        <img src="assets/images/shoe.jpg" alt="converse-shoe" />
+                                        <span>Converse Shoe</span>
+                                    </div>
+                                </td>
                                 <td>$15</td>
                                 <td>4500</td>
                                 <td>12/12/2022</td>
-                                <td><i className="ri-more-2-fill"></i></td>
+                                <td>
+                                    <i className="ri-more-2-fill"></i>
+                                </td>
                             </tr>
                         </tbody>
-                    </Table>
+                    </TopProductsTable>
                 </TopProductsListCard>
                 <CustomersCard>
                     <h2>Customers</h2>
