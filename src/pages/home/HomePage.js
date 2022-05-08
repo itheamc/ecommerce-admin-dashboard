@@ -112,7 +112,7 @@ const HomePage = () => {
                                 <th>Products</th>
                                 <th>Price</th>
                                 <th>Total Sold</th>
-                                <th>Date added</th>
+                                <th>Product Availity</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -120,13 +120,13 @@ const HomePage = () => {
                             <tr>
                                 <td>
                                     <div>
-                                        <img src="assets/images/R.jpg" alt="wireless-headphone" />
-                                        <span>Wireless HeadPhone</span>
+                                        <img src="assets/images/nike1.png" alt="nike shoe" />
+                                        <span>Sneakers Skate Shoe</span>
                                     </div>
                                 </td>
                                 <td>$100</td>
                                 <td>9500</td>
-                                <td>12/12/2022</td>
+                                <td><p>In stock</p></td>
                                 <td>
                                     <i className="ri-more-2-fill"></i>
                                 </td>
@@ -134,13 +134,13 @@ const HomePage = () => {
                             <tr>
                                 <td>
                                     <div>
-                                        <img src="assets/images/pos.png" alt="wireless-earpods" />
-                                        <span>Wireless Earpods</span>
+                                        <img src="assets/images/nike2.png" alt="nike shoe" />
+                                        <span>Running Nike Shoe</span>
                                     </div>
                                 </td>
                                 <td>$10</td>
                                 <td>7400</td>
-                                <td>12/12/2022</td>
+                                <td><p>In stock</p></td>
                                 <td>
                                     <i className="ri-more-2-fill"></i>
                                 </td>
@@ -154,7 +154,7 @@ const HomePage = () => {
                                 </td>
                                 <td>$15</td>
                                 <td>4500</td>
-                                <td>12/12/2022</td>
+                                <td><p className='out-of-stock'>Out of stock</p></td>
                                 <td>
                                     <i className="ri-more-2-fill"></i>
                                 </td>

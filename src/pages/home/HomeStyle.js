@@ -241,6 +241,10 @@ export const TopProductsListCard = styled(Card)`
         }
 
         & > div.top-products-list-card-header-action {
+            display: flex;
+            align-items: center;
+            gap: ${props => props.theme.gap.medium};
+
             & > i {
                 cursor: pointer;
             }
@@ -267,8 +271,22 @@ export const TopProductsTable = styled(Table)`
                         width: 30px;
                         height: 30px;
                         border-radius: ${props => props.theme.border_radius.circular};
-                        object-fit: cover;
+                        object-fit: contain;
                     }
+                }
+                & > p {
+                    width: max-content;
+                    color: blue;
+                    background-color: ${props => props.theme.color.divider};
+                    padding: ${props => props.theme.padding.xx_small} ${props => props.theme.padding.medium};
+                    border-radius: ${props => props.theme.border_radius.large};
+                }
+                & > p.out-of-stock {
+                    width: max-content;
+                    color: ${props => props.theme.color.accent};
+                    background-color: ${props => props.theme.color.divider};
+                    padding: ${props => props.theme.padding.xx_small} ${props => props.theme.padding.medium};
+                    border-radius: ${props => props.theme.border_radius.large};
                 }
             }
         }

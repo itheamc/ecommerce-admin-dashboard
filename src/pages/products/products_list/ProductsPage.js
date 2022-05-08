@@ -3,7 +3,7 @@ import {
     ProductsContainer,
     ProductsCard,
     ProductsTable
-} from './ProductStyle'
+} from './ProductsStyle'
 
 const ProductsPage = () => {
     return (
@@ -41,15 +41,15 @@ const ProductsPage = () => {
                                         </td>
                                         <td>
                                             <div>
-                                                <img src="assets/images/R.jpg" alt="Wireless headphone" />
-                                                <span id='product-name'>Wireless HeadPhone</span>
+                                                <img src="assets/images/nike2.png" alt="nike shoe" />
+                                                <span id='product-name'>Running Nike Shoe</span>
                                             </div>
                                         </td>
                                         <td>
                                             <span>E001010{product}</span>
                                         </td>
                                         <td>
-                                            <span>Electronics</span>
+                                            <span>Sports Shoe</span>
                                         </td>
                                         <td>
                                             <span>$100</span>

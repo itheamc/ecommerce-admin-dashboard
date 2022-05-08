@@ -1,18 +1,23 @@
 import styled from 'styled-components';
-import { Card, Table } from '../../components/styles/Styles';
+import { Card, Table } from '../../../components/styles/Styles';
 
-export const ProductsContainer = styled.div`
+
+export const OrdersContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: ${props => props.theme.padding.medium};
+    overflow-y: hidden;
 `
-export const ProductsCard = styled(Card)`
-    width: 100%;
 
-    & > div.products-card-header {
+export const OrdersTableCard = styled(Card)`
+    flex: 1;
+    width: 100%;
+    overflow-y: hidden;
+
+    & > div.orders-card-header {
         gap: ${props => props.theme.gap.medium};
         margin-bottom: ${props => props.theme.padding.medium};
 
@@ -27,15 +32,14 @@ export const ProductsCard = styled(Card)`
     }
 `
 
+export const OrdersTable = styled(Table)`
 
-export const ProductsTable = styled(Table)`
     & > tbody {
 
         & > tr {
 
             & > td {
                 padding: ${props => props.theme.padding.medium} 0;
-                
                 & > div {
                     width: max-content;
                     display: flex;
@@ -51,13 +55,14 @@ export const ProductsTable = styled(Table)`
                         object-fit: cover;
                     }
 
-                    & > span#product-name {
+                    & > span#item-name {
                         font-weight: ${props => props.theme.font_weight.regular};
                     }
                 }
 
-                & > span#product-id {
+                & > span#order-number {
                     cursor: pointer;
+                    transition: all 0.3s linear;
 
                     &:hover {
                         color: ${props => props.theme.color.primary};
@@ -67,8 +72,8 @@ export const ProductsTable = styled(Table)`
 
                 & > span#status {
                     width: max-content;
-                    color: white;
-                    background-color: lightgreen;
+                    color: ${props => props.theme.color.accent};
+                    background-color: ${props => props.theme.color.divider};
                     border-radius: ${props => props.theme.border_radius.large};
                     padding: ${props => props.theme.padding.xxx_small} ${props => props.theme.padding.small};
                 }
@@ -76,3 +81,4 @@ export const ProductsTable = styled(Table)`
         }
     }
 `
+

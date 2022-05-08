@@ -1,23 +1,18 @@
 import styled from 'styled-components';
-import { Card, Table } from '../../components/styles/Styles';
+import { Card, Table } from '../../../components/styles/Styles';
 
-
-export const OrdersContainer = styled.div`
+export const ProductsContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding: ${props => props.theme.padding.medium};
-    overflow-y: hidden;
 `
-
-export const OrdersTableCard = styled(Card)`
-    flex: 1;
+export const ProductsCard = styled(Card)`
     width: 100%;
-    overflow-y: hidden;
 
-    & > div.orders-card-header {
+    & > div.products-card-header {
         gap: ${props => props.theme.gap.medium};
         margin-bottom: ${props => props.theme.padding.medium};
 
@@ -32,14 +27,15 @@ export const OrdersTableCard = styled(Card)`
     }
 `
 
-export const OrdersTable = styled(Table)`
 
+export const ProductsTable = styled(Table)`
     & > tbody {
 
         & > tr {
 
             & > td {
                 padding: ${props => props.theme.padding.medium} 0;
+                
                 & > div {
                     width: max-content;
                     display: flex;
@@ -52,17 +48,16 @@ export const OrdersTable = styled(Table)`
                         width: 30px;
                         height: 30px;
                         border-radius: ${props => props.theme.border_radius.circular};
-                        object-fit: cover;
+                        object-fit: contain;
                     }
 
-                    & > span#item-name {
+                    & > span#product-name {
                         font-weight: ${props => props.theme.font_weight.regular};
                     }
                 }
 
-                & > span#order-number {
+                & > span#product-id {
                     cursor: pointer;
-                    transition: all 0.3s linear;
 
                     &:hover {
                         color: ${props => props.theme.color.primary};
@@ -72,8 +67,8 @@ export const OrdersTable = styled(Table)`
 
                 & > span#status {
                     width: max-content;
-                    color: ${props => props.theme.color.accent};
-                    background-color: ${props => props.theme.color.divider};
+                    color: white;
+                    background-color: lightgreen;
                     border-radius: ${props => props.theme.border_radius.large};
                     padding: ${props => props.theme.padding.xxx_small} ${props => props.theme.padding.small};
                 }
@@ -81,4 +76,3 @@ export const OrdersTable = styled(Table)`
         }
     }
 `
-

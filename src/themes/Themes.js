@@ -70,7 +70,15 @@ const extras = {
         small: '6px',
         medium: '8px',
         large: '10px',
-    }
+    },
+    line_height: {
+        x_small: '1.5',
+        small: '1.7',
+        medium: '1.8',
+        large: '2',
+        x_large: '2.2',
+        xx_large: '2.4'
+    },
 };
 
 
