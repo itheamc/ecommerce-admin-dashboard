@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
     OrdersContainer,
     OrdersTableCard,
@@ -36,11 +37,14 @@ const OrdersPage = () => {
                                             <span>#{item}</span>
                                         </td>
                                         <td>
-                                            <span id='order-number'>0105010{item}</span>
+                                            <Link to={`/orders/0105010${item}`}>
+                                                <span id='order-number'>0105010{item}</span>
+                                            </Link>
+                                            
                                         </td>
                                         <td>
                                             <div>
-                                                <img src="https://images.unsplash.com/photo-1518806118471-f28b20a1d79d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" />
+                                                <img src="/assets/images/nike1.png" alt="nike" />
                                                 <span id='item-name'>Product {item} Name</span>
                                             </div>
                                         </td>

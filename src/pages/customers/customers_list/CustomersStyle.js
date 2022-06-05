@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Card, Table } from '../../components/styles/Styles';
+import { Card, Table } from '../../../components/styles/Styles';
 
 
 export const CustomersContainer = styled.div`

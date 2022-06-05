@@ -9,6 +9,14 @@ export const OrderDetailsContainer = styled.div`
     justify-content: center;
     align-items: flex-start;
     padding: 1rem;
+
+    & > div.order-date {
+
+        & > p {
+            font-size: ${props => props.theme.font_size.x_small};
+            color: ${props => props.theme.color.secondary_text};
+        }
+    }
 `
 
 export const OrderHeader = styled.div`
@@ -34,24 +42,77 @@ export const OrderDetailsContents = styled.div`
 export const OrderItemsCard = styled(Card)`
     flex: 5;
 
+    & > div.order-items-header {      
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    & > Table {
+        & > h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: ${props => props.theme.color.secondary_text};
+        }
+    }
 
-        & > tbody {
-            & > tr {
-                & > td {
-                    & > div {
-                        display: flex;
-                        gap: ${props => props.theme.gap.small};
-                        justify-content: flex-start;
-                        align-items: center;
+    & > div.order-items-body {
+        display: flex;
+        flex-direction: column;
+        gap: ${props => props.theme.gap.x_large};
+        margin-top: ${props => props.theme.gap.medium};
 
-                        & > img {
-                            width: 30px;
-                            height: 30px;
-                            border-radius: 50%;
-                            object-fit: cover;
+        & > div.order-items-container {
+            display: flex;
+            width: 100%;
+            gap: ${props => props.theme.gap.x_large};
+
+            & > div.image-section {
+
+                & > img {
+                    width: 80px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: ${props => props.theme.border_radius.medium};
+
+                }
+            }
+
+            & > div.details-section {
+                display: flex;
+                height: 100px;
+                width: 100%;
+                gap: ${props => props.theme.gap.large};
+                border-bottom: 2px solid ${props => props.theme.color.divider};
+                
+
+                & > div.product-details {
+                    margin-top: ${props => props.theme.gap.xx_small};
+                    line-height: ${props => props.theme.line_height.small};
+
+                    & > h4 {
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                    }
+
+                    & > p {
+                        font-size: ${props => props.theme.font_size.small};
+                        color: ${props => props.theme.color.secondary_text};
+
+                        span {
+                            font-weight: 600;
                         }
+                    }
+                }
+
+
+                & > div.product-values {
+                    flex: 1;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: ${props => props.theme.gap.xx_small};
+
+                    & > p {
+                        font-size: 0.8rem;
+                        font-weight: 400;
                     }
                 }
             }

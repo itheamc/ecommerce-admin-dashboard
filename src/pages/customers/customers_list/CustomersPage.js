@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
     CustomersContainer,
     CustomersTableCard,
@@ -36,7 +37,9 @@ const CustomersPage = () => {
                                             <span>#{item}</span>
                                         </td>
                                         <td>
-                                            <span id='customer-id'>01201{item}</span>
+                                            <Link to={`/customers/01201${item}`}>
+                                                <span id='customer-id'>01201{item}</span>
+                                            </Link>
                                         </td>
                                         <td>
                                             <div>

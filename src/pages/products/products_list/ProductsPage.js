@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
     ProductsContainer,
     ProductsCard,
@@ -37,11 +38,13 @@ const ProductsPage = () => {
                                             <span>#{product}</span>
                                         </td>
                                         <td>
-                                            <span id='product-id'>0102030{product}</span>
+                                            <Link to={`/products/0102030${product}`}>
+                                                <span id='product-id'>0102030{product}</span>
+                                            </Link>
                                         </td>
                                         <td>
                                             <div>
-                                                <img src="assets/images/nike2.png" alt="nike shoe" />
+                                                <img src="/assets/images/nike2.png" alt="nike shoe" />
                                                 <span id='product-name'>Running Nike Shoe</span>
                                             </div>
                                         </td>

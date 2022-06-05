@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Chart from "react-apexcharts";
 
 // Card
 export const Card = styled.div`
@@ -42,4 +43,11 @@ export const Table = styled.table`
         }
     }
 
+`;
+
+
+export const AChart = styled(Chart)`
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
 `;

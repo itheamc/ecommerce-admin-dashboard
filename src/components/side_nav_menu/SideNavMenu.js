@@ -21,7 +21,7 @@ const SideNavMenu = () => {
     <>
       <MenuHeaderContainer>
         <LogoContainer>
-          <LogoImage src="assets/images/logo.png" alt='logo' onClick={() => dispatch(toggleTheme())} />
+          <LogoImage src="/assets/images/logo.png" alt='logo' onClick={() => dispatch(toggleTheme())} />
         </LogoContainer>
       </MenuHeaderContainer>
       <MenuItemsContainer>
@@ -39,13 +39,13 @@ const SideNavMenu = () => {
             </MenuItemLink>
           </MenuItem>
           <MenuItem>
-            <MenuItemLink to="/products" selected={selected === 2} onClick={() => setSelected(2)}>
+            <MenuItemLink to="products" selected={selected === 2} onClick={() => setSelected(2)}>
               <i className="ri-briefcase-line"></i>
               <span>Products</span>
             </MenuItemLink>
           </MenuItem>
           <MenuItem>
-            <MenuItemLink to="/orders" selected={selected === 3} onClick={() => setSelected(3)}>
+            <MenuItemLink to="orders" selected={selected === 3} onClick={() => setSelected(3)}>
               <i className="ri-shopping-cart-line"></i>
               <span>Orders</span>
             </MenuItemLink>
@@ -57,13 +57,19 @@ const SideNavMenu = () => {
             </MenuItemLink>
           </MenuItem>
           <MenuItem>
-            <MenuItemLink to="/reports" selected={selected === 5} onClick={() => setSelected(5)}>
+            <MenuItemLink to="/customers" selected={selected === 5} onClick={() => setSelected(5)}>
+              <i class="ri-exchange-dollar-line"></i>
+              <span>Transactions</span>
+            </MenuItemLink>
+          </MenuItem>
+          <MenuItem>
+            <MenuItemLink to="/reports" selected={selected === 6} onClick={() => setSelected(6)}>
               <i className="ri-line-chart-line"></i>
               <span>Reports</span>
             </MenuItemLink>
           </MenuItem>
           <MenuItem>
-            <MenuItemLink to="/settings" selected={selected === 6} onClick={() => setSelected(6)}>
+            <MenuItemLink to="/settings" selected={selected === 7} onClick={() => setSelected(7)}>
               <i className="ri-settings-3-line"></i>
               <span>Settings</span>
             </MenuItemLink>

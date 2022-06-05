@@ -40,7 +40,7 @@ export const ProductContainer = styled(Card)`
 
             & > div.star-section {
                 display: flex;
-                color: ${props => props.theme.color.accent};
+                color: #00b3b3;
             }
 
             & > h3 {
@@ -96,18 +96,23 @@ export const ProductContainer = styled(Card)`
 export const ProductRatingAndReviewsContainer = styled(Card)`
     flex: 2;
 
+    & > h3 {
+        font-size: ${props => props.theme.font_size.large};
+        font-weight: ${props => props.theme.font_weight.medium};
+        color: ${props => props.theme.color.secondary_text}; 
+    }
+
     & > div.product-rating-container {
         margin-top: ${props => props.theme.margin.medium};
         display: flex;
-        flex-direction: column;
-        gap: ${props => props.theme.gap.large};
+        gap: ${props => props.theme.gap.x_large};
 
         & > div.rating-container {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
-            gap: ${props => props.theme.gap.small};
+            gap: ${props => props.theme.gap.x_small};
 
             & > div.rating-points {
                 display: flex;
@@ -116,18 +121,12 @@ export const ProductRatingAndReviewsContainer = styled(Card)`
 
                 & > h3 {
                     font-size: ${props => props.theme.font_size.xxx_large};
-                    font-weight: 700;
-                }
-
-                & > p {
-                    font-size: ${props => props.theme.font_size.medium};
-                    color: ${props => props.theme.color.secondary_text};
-                    font-weight: 500;
+                    font-weight: 600;
                 }
             }
             & div.star-section {
                 display: flex;
-                color: ${props => props.theme.color.accent};
+                color: #00b3b3;
             }
 
             & > div.total-reviews {
@@ -135,10 +134,6 @@ export const ProductRatingAndReviewsContainer = styled(Card)`
                 align-items: center;
                 gap: ${props => props.theme.gap.xx_small};
 
-                & > i {
-                    color: ${props => props.theme.color.primary};
-                    font-size: ${props => props.theme.font_size.large};
-                }
                 & > p {
                     color: ${props => props.theme.color.secondary_text};
                     font-size: ${props => props.theme.font_size.medium};
@@ -154,8 +149,8 @@ export const ProductRatingAndReviewsContainer = styled(Card)`
             width: 100%;
             gap: ${props => props.theme.gap.small};
         }
-
-        & > div.user-review-container {
+    }
+    & > div.user-review-container {
             margin-top: ${props => props.theme.margin.medium};
 
             & > h3 {
@@ -186,6 +181,11 @@ export const ProductRatingAndReviewsContainer = styled(Card)`
                         display: flex;
                         flex-direction: column;
 
+                        & > p {
+                            color: ${props => props.theme.color.secondary_text};
+                            font-size: ${props => props.theme.font_size.medium};
+                        }
+
                         & > div.header {
                             display: flex;
                             justify-content: space-between;
@@ -193,13 +193,13 @@ export const ProductRatingAndReviewsContainer = styled(Card)`
 
                             & > h3 {
                                 font-size: ${props => props.theme.font_size.large};
-                                font-weight: 700;
+                                font-weight: 600;
                             }
 
                             & > div.star-section {
 
                                 & > i {
-                                    color: ${props => props.theme.color.accent};
+                                    color: #00b3b3;
                                 }
                             }
                             
@@ -216,7 +216,6 @@ export const ProductRatingAndReviewsContainer = styled(Card)`
                 }
             }
         }
-    }
 `   
 
 
@@ -237,10 +236,6 @@ export const RatingProgressBar = styled.div`
             font-size: ${props => props.theme.font_size.large};
             font-weight: 600;
         }
-
-        & > i {
-            color: ${props => props.theme.color.accent};
-        }
     }
 
     & > div.progress-bar {
@@ -252,13 +247,25 @@ export const RatingProgressBar = styled.div`
         justify-content: flex-start;
         background-color: ${props => props.theme.color.divider};
         border-radius: ${props => props.theme.border_radius.small};
+        animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+
 
         & > span {
             position: absolute;
             height: 100%;
             width: ${props => props.value ? props.value : 0}%;
-            background-color: ${props => props.color || props.theme.color.accent};
+            background-color: #00b3b3;
+            transform: scaleX(0);
+            transform-origin: left;
             border-radius: ${props => props.theme.border_radius.small};
+            animation: animate 0.8s cubic-bezier(1, 0, 0.5, 1) forwards;
+
+            
+            @keyframes animate {    
+                100% {
+                    transform: scaleX(1);
+                }
+            }
 
             &::before {
                 content: '';
@@ -270,20 +277,36 @@ export const RatingProgressBar = styled.div`
                 border: 7px solid transparent;
                 border-bottom-width: 0px;
                 border-right-width: 0px;
+                opacity: 0;
                 border-top-color: ${props => props.theme.color.primary};
+                animation: textshow 0.8s linear forwards;
+
+                @keyframes textshow {
+                    100% {
+                        opacity: 1;
+                    }
+                }
 
             }
 
             &::after {
                 position: absolute;
                 content: '${props => props.value}%';
-                right: -16px;
+                right: -15px;
                 top: -27px;
                 font-size: ${props => props.theme.font_size.x_small};
                 background-color: ${props => props.theme.color.primary};
                 color: #fff;
-                border-radius: ${props => props.theme.border_radius.small};
+                border-radius: ${props => props.theme.border_radius.circular};
+                opacity: 0;
                 padding: ${props => props.theme.padding.xxx_small} ${props => props.theme.padding.x_small};
+                animation: textshow 1s linear forwards;
+
+                @keyframes textshow {
+                    100% {
+                        opacity: 1;
+                    } 
+                }
             }
         }
     }

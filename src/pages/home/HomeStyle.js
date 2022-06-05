@@ -106,8 +106,14 @@ export const DailySalesCard = styled(Card)`
     gap: ${props => props.theme.gap.medium};
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+
+    & > h2 {
+        font-size: ${props => props.theme.font_size.large};
+        font-weight: ${props => props.theme.font_weight.bold};
+        color: ${props => props.theme.color.secondary_text};
+    }
 `
 
 export const NewlyRegisteredStoreCard = styled(Card)`
@@ -298,8 +304,12 @@ export const CustomersCard = styled(Card)`
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: ${props => props.theme.gap.medium};
+
+    & > h2 {
+        font-size: ${props => props.theme.font_size.x_large};
+        color: ${props => props.theme.color.secondary_text};
+        font-weight: ${props => props.theme.font_weight.medium};
+    }
 
 `

@@ -14,6 +14,69 @@ import {
     CustomersCard
 } from './HomeStyle.js'
 
+import { AChart } from '../../components/styles/Styles.js'
+
+const option = {
+    series: [{
+      name: 'Sales',
+      data: [800, 500, 1200, 300, 900, 100, 600]
+    }],
+  stroke: {
+    width: 2,
+    curve: 'smooth'
+  },
+    chart: {
+        stacked: false,
+        zoom: {
+            type: 'x',
+            enabled: true,
+            autoScaleYaxis: true
+        },
+        toolbar: {
+            show: false
+        },
+    },
+  yaxis: {
+    labels: {
+      formatter: function (val) {
+        return (val / 1000) + "k";
+      }
+    }
+  },
+  markers: {
+    size: 0
+  },
+  fill: {
+    type: 'gradient',
+    gradient: {
+      shadeIntensity: 1,
+      inverseColors: false,
+      opacityFrom: 0.8,
+      opacityTo: 0.2,
+      stops: [0, 90, 100]
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  grid: {
+    show: false, 
+  },
+  xaxis: {
+    categories: ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'],
+  },
+};
+
+const d_option = {
+    series: [35, 23],
+    labels: ['Current Customers', 'New Customers'],
+    stroke: {
+        width: 3,
+        lineCap: 'round'
+    },
+}
+
+
 const HomePage = () => {
     return (
         <HomeContainer>
@@ -58,7 +121,7 @@ const HomePage = () => {
             <MiddleHomeCardContainer>
                 <DailySalesCard>
                     <h2>Daily Sales</h2>
-                    <p>Charts will be shown here...</p>
+                    <AChart options={option} series={option.series} type="area" width="100%" height="100%"/>
                 </DailySalesCard>
                 <NewlyRegisteredStoreCard>
                     <div className='new-store-card-header'>
@@ -164,7 +227,7 @@ const HomePage = () => {
                 </TopProductsListCard>
                 <CustomersCard>
                     <h2>Customers</h2>
-                    <p>Customers Analytics will be shown here...</p>
+                    <div><AChart options={d_option} series={d_option.series} type="radialBar" width="100%" /></div>
                 </CustomersCard>
             </CustomersProductsCardsContainer>
         </HomeContainer>

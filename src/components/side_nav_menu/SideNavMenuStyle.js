@@ -53,11 +53,12 @@ export const PrimaryMenuItems = styled.ul`
 `
 
 export const MenuItem = styled.li`
- width: 100%;
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: flex-start;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
 `
 
 export const MenuItemLink = styled(NavLink)`
