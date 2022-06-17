@@ -15,6 +15,10 @@ export const CustomerInformationContainer = styled.div`
     width: 100%;
     display: flex;
     gap: ${props => props.theme.gap.medium};
+
+    @media (max-width: 884px) {
+        flex-direction: column;
+    }
 `;
 
 

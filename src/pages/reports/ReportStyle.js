@@ -18,6 +18,7 @@ export const SummaryReportContainer = styled.div`
     width: 100%;
     gap: ${props => props.theme.gap.medium};
     padding: 0 ${props => props.theme.padding.medium};
+
 `;
 
 export const SummaryReport = styled(Card)`
@@ -81,6 +82,10 @@ export const MiddleReportContainer = styled.div`
     width: 100%;
     gap: ${props => props.theme.gap.medium};
     padding: 0 ${props => props.theme.padding.medium};
+
+    @media (max-width: 884px) {
+        flex-direction: column;
+    }
 `;
 
 export const RevenueCard = styled(Card)`
@@ -97,6 +102,7 @@ export const RevenueCard = styled(Card)`
     }
 `;
 
+
 export const SellerCard = styled(Card)`
     flex: 1;
     gap: ${props => props.theme.gap.medium};
@@ -108,6 +114,13 @@ export const SellerCard = styled(Card)`
         font-size: ${props => props.theme.font_size.x_large};
         font-weight: 600;
         color: ${props => props.theme.color.secondary_text};
+    }
+    & > div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const CustomerRatingAndReviewsContainer = styled.div`
@@ -118,6 +131,11 @@ export const CustomerRatingAndReviewsContainer = styled.div`
     align-items: center;
     gap: ${props => props.theme.gap.medium};
     padding: 0 ${props => props.theme.padding.medium};
+
+    @media (max-width: 884px) {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
 `;
 
 export const CustomerCard = styled(Card)`
@@ -135,7 +153,10 @@ export const CustomerCard = styled(Card)`
     }
 
     & > div {
-        margin-top: ${props => props.theme.padding.large};
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 `;
 
@@ -244,4 +265,11 @@ export const TotalReviewsCard = styled(Card)`
         font-size: ${props => props.theme.font_size.x_large};
         font-weight: 600;
         color: ${props => props.theme.color.secondary_text};
+    }
+    & > div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `;

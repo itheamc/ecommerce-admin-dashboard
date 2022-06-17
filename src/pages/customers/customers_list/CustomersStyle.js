@@ -56,7 +56,7 @@ export const CustomersTable = styled(Table)`
                     }
 
                     & > span#customer-name {
-                        font-weight: ${props => props.theme.font_weight.regular};
+                        font-weight: ${props => props.theme.font_weight.bold};
                     }
                 }
 
@@ -77,6 +77,15 @@ export const CustomersTable = styled(Table)`
                     padding: ${props => props.theme.padding.xxx_small} ${props => props.theme.padding.small};
                 }
             }
+        }
+    }
+
+    @media (max-width: 884px) {
+        & > thead > tr > th.serial-number,.phone,.email { 
+            display: none;
+        }
+        & > tbody > tr > td.serial-number {
+            display: none;
         }
     }
 `

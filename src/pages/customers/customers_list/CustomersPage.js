@@ -17,11 +17,11 @@ const CustomersPage = () => {
                 <CustomersTable>
                     <thead>
                         <tr>
-                            <th>S.N.</th>
-                            <th>Customer Id</th>
+                            <th className='serial-number'>S.N.</th>
+                            <th>Id</th>
                             <th>Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
+                            <th className='phone'>Phone</th>
+                            <th className='email'>Email</th>
                             <th>Address</th>
                             <th>Joined On</th>
                             <th>Status</th>
@@ -33,7 +33,7 @@ const CustomersPage = () => {
                             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(item => {
                                 return (
                                     <tr key={item}>
-                                        <td>
+                                        <td className='serial-number'>
                                             <span>#{item}</span>
                                         </td>
                                         <td>
@@ -47,10 +47,10 @@ const CustomersPage = () => {
                                                 <span id='customer-name'>Customer {item} Name</span>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td className='phone'>
                                             <span>+977-9876543210</span>
                                         </td>
-                                        <td>
+                                        <td className='email'>
                                             <span>customer{item}@email.com</span>
                                         </td>
                                         <td>

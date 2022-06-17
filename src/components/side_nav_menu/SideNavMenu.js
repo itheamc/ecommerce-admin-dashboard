@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
-import { toggleTheme } from '../../states/theme/themeSlice.js';
 import {
   MenuHeaderContainer,
   LogoContainer,
@@ -14,14 +12,14 @@ import {
 
 const SideNavMenu = () => {
 
-  const dispatch = useDispatch();
   const [selected, setSelected] = useState(0);
+  const [catalogExpanded, setCatalogExpanded] = useState(false);
 
   return (
     <>
       <MenuHeaderContainer>
         <LogoContainer>
-          <LogoImage src="/assets/images/logo.png" alt='logo' onClick={() => dispatch(toggleTheme())} />
+          <LogoImage src="/assets/images/logo.png" alt='logo' />
         </LogoContainer>
       </MenuHeaderContainer>
       <MenuItemsContainer>
@@ -38,11 +36,31 @@ const SideNavMenu = () => {
               <span>Stores</span>
             </MenuItemLink>
           </MenuItem>
-          <MenuItem>
-            <MenuItemLink to="products" selected={selected === 2} onClick={() => setSelected(2)}>
+          <MenuItem expanded={catalogExpanded}>
+            <MenuItemLink to="#" expanded={catalogExpanded} onClick={() => setSelected(() => setCatalogExpanded(!catalogExpanded))}>
               <i className="ri-briefcase-line"></i>
-              <span>Products</span>
+              <span>Catalouge</span>
+              <div className="dropdown-arrow">
+                <i className="ri-arrow-down-s-line"></i>
+              </div>
             </MenuItemLink>
+            <div className='drop-down-menu'>
+              <MenuItemLink to="categories" selected={selected === 8} onClick={() => setSelected(8)}>
+                <span className='drop-down-item'>Categories</span>
+              </MenuItemLink>
+              <MenuItemLink to="products" selected={selected === 9} onClick={() => setSelected(9)}>
+                <span className='drop-down-item'>Products</span>
+              </MenuItemLink>
+              <MenuItemLink to="attributes" selected={selected === 10} onClick={() => setSelected(10)}>
+                <span className='drop-down-item'>Attributes</span>
+              </MenuItemLink>
+              <MenuItemLink to="variation-attributes" selected={selected === 11} onClick={() => setSelected(11)}>
+                <span className='drop-down-item'>Variation Attributes</span>
+              </MenuItemLink>
+              <MenuItemLink to="reviews" selected={selected === 12} onClick={() => setSelected(12)}>
+                <span className='drop-down-item'>Reviews</span>
+              </MenuItemLink>
+            </div>
           </MenuItem>
           <MenuItem>
             <MenuItemLink to="orders" selected={selected === 3} onClick={() => setSelected(3)}>
@@ -57,8 +75,8 @@ const SideNavMenu = () => {
             </MenuItemLink>
           </MenuItem>
           <MenuItem>
-            <MenuItemLink to="/customers" selected={selected === 5} onClick={() => setSelected(5)}>
-              <i class="ri-exchange-dollar-line"></i>
+            <MenuItemLink to="/transactions" selected={selected === 5} onClick={() => setSelected(5)}>
+              <i className="ri-exchange-dollar-line"></i>
               <span>Transactions</span>
             </MenuItemLink>
           </MenuItem>

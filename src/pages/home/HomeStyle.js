@@ -20,11 +20,17 @@ export const HomeContainer = styled.div`
  * Summary Card container
  */
 export const SummaryCardContainer = styled.div`
+    position: relative;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     gap: ${props => props.theme.gap.medium};
     padding: 0 ${props => props.theme.padding.medium};
+
+    @media (max-width: 884px) {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
 `
 
 
@@ -36,10 +42,12 @@ export const SummaryCard = styled(Card)`
     height: 100px;
     gap: ${props => props.theme.gap.medium};
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
+
+
 `;
+
 
 
 /**
@@ -99,6 +107,11 @@ export const MiddleHomeCardContainer = styled.div`
     width: 100%;
     gap: ${props => props.theme.gap.medium};
     padding: 0 ${props => props.theme.padding.medium};
+
+    @media (max-width: 884px) {
+        display: flex;
+        flex-direction: column;
+    }
 `;
 
 export const DailySalesCard = styled(Card)`
@@ -216,10 +229,17 @@ export const CustomersProductsCardsContainer = styled.div`
     align-items: center;
     gap: ${props => props.theme.gap.medium};
     padding: 0 ${props => props.theme.padding.medium};
+
+    @media (max-width: 884px) {
+        display: flex;
+        flex-direction: column;
+
+
+    }
 `
 export const TopProductsListCard = styled(Card)`
-    height: 100%;
-    flex: 2;
+    width: 100%;
+    flex: 1;
     gap: ${props => props.theme.gap.medium};
     display: flex;
     flex-direction: column;
@@ -300,16 +320,50 @@ export const TopProductsTable = styled(Table)`
 `
 
 export const CustomersCard = styled(Card)`
-    height: 100%;
+    width: 100%;
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: ${props => props.theme.gap.medium};
 
-    & > h2 {
-        font-size: ${props => props.theme.font_size.x_large};
-        color: ${props => props.theme.color.secondary_text};
-        font-weight: ${props => props.theme.font_weight.medium};
+    & > div.transaction-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        & > div.transaction-title {
+
+            & > h2 {
+                font-size: ${props => props.theme.font_size.x_large};
+            }
+
+            & > p {
+                font-size: ${props => props.theme.font_size.small};
+                color: ${props => props.theme.color.secondary_text};
+
+            }
+        }
+
+    
+
+    }
+
+    & > Table {
+        & > tbody > tr > td > div {
+            width: max-content;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: ${props => props.theme.gap.medium};
+
+            & > img {
+                width: 30px;
+                height: 30px;
+                border-radius: ${props => props.theme.border_radius.circular};
+                object-fit: cover;
+            }
+        }
     }
 
 `

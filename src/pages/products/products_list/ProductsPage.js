@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import {
     ProductsContainer,
     ProductsCard,
-    ProductsTable
+    ProductsTable,
 } from './ProductsStyle'
+import { ActionLink } from '../../../components/styles/Styles'
 
 const ProductsPage = () => {
     return (
@@ -17,16 +18,16 @@ const ProductsPage = () => {
                 <ProductsTable>
                     <thead>
                         <tr>
-                            <th>S.N.</th>
-                            <th>Product Id</th>
-                            <th>Product Name</th>
+                            <th className='serial-number'>S.N.</th>
+                            <th>Id</th>
+                            <th>Name</th>
                             <th>SKU</th>
-                            <th>Category</th>
-                            <th>Price</th>
+                            <th className='category'>Category</th>
+                            <th className='price'>Price</th>
                             <th>Store</th>
                             <th>Status</th>
                             <th>Added On</th>
-                            <th></th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -34,7 +35,7 @@ const ProductsPage = () => {
                             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(product => {
                                 return (
                                     <tr key={product}>
-                                        <td>
+                                        <td className='serial-number'>
                                             <span>#{product}</span>
                                         </td>
                                         <td>
@@ -44,17 +45,17 @@ const ProductsPage = () => {
                                         </td>
                                         <td>
                                             <div>
-                                                <img src="/assets/images/nike2.png" alt="nike shoe" />
+                                                <img src="/assets/images/nike1.png" alt="nike shoe" />
                                                 <span id='product-name'>Running Nike Shoe</span>
                                             </div>
                                         </td>
                                         <td>
                                             <span>E001010{product}</span>
                                         </td>
-                                        <td>
+                                        <td className='category'>
                                             <span>Sports Shoe</span>
                                         </td>
-                                        <td>
+                                        <td className='price'>
                                             <span>$100</span>
                                         </td>
                                         <td>
@@ -65,7 +66,10 @@ const ProductsPage = () => {
                                         </td>
                                         <td><span></span>2022-03-23</td>
                                         <td>
-                                            <i className="ri-more-2-fill"></i>
+                                            <div className='action-btn'>
+                                                <ActionLink to={`/product/0102030${product}/edit`}><i className="ri-edit-2-line"></i></ActionLink> 
+                                                <ActionLink to={`/product/0102030${product}/delete`}><i className="ri-delete-bin-line"></i></ActionLink>
+                                            </div>
                                         </td>
                                     </tr>
                                 )

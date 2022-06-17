@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Chart from "react-apexcharts";
+import { Link } from "react-router-dom";
 
 // Card
 export const Card = styled.div`
@@ -21,8 +22,9 @@ export const Table = styled.table`
             & > th {
                 text-align: left;
                 color: ${props => props.theme.color.secondary_text};
-                font-size: ${props => props.theme.font_size.medium};
+                font-size: ${props => props.theme.font_size.small};
                 padding: ${props => props.theme.padding.small} 0;
+                text-transform: uppercase;
             }
         }
     }
@@ -50,4 +52,8 @@ export const AChart = styled(Chart)`
     width: 100%;
     height: 100%;
     background-color: transparent;
+`;
+
+export const ActionLink = styled(Link)`
+    text-decoration: none;
 `;

@@ -21,7 +21,14 @@ import StorePage from './pages/stores/store/StorePage.js';
 import OrderPage from './pages/orders/order/OrderPage.js';
 import ProductPage from './pages/products/product/ProductPage.js';
 import ReportPage from './pages/reports/ReportPage.js';
+import TransactionPage from './pages/transactions/TransactionPage.js';
 import GlobalStyles from './themes/GlobalStyles.js';
+import ProductEditPage from './pages/products/product_edit/ProductEditPage.js';
+import AttributesPage from './pages/attributes/AttributesPage.js';
+import ReviewsPage from './pages/reviews/ReviewsPage.js';
+import VariationAttributesPage from './pages/variation_attributes/VariationAttributesPage.js';
+import CategoriesPage from './pages/categories/CategoriesPage.js';
+
 
 function App() {
 
@@ -47,7 +54,13 @@ function App() {
               <Route path="/customers/:id" element={<CustomerPage />} />
               <Route path="/stores" element={<StoresPage />} />
               <Route path="/stores/:id" element={<StorePage />} />
+              <Route path='/transactions' element={<TransactionPage />} />
               <Route path="/reports" element={<ReportPage />} />
+              <Route path="/product/:id/edit" element={<ProductEditPage />} />
+              <Route path="/attributes" element={<AttributesPage />} />
+              <Route path="/variation-attributes" element={<VariationAttributesPage />} />
+              <Route path="/categories" element={<CategoriesPage />} />
+              <Route path="/reviews" element={<ReviewsPage />} />
             </Routes>
           </ContentContainer>
         </MainContainer>

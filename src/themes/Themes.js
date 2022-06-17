@@ -37,7 +37,8 @@ const extras = {
         medium: '16px',
         large: '24px',
         x_large: '32px',
-        xx_large: '48px'
+        xx_large: '48px',
+        xxx_large: '54px'
     },
     border_radius: {
         x_small: '2px',
@@ -104,6 +105,7 @@ export const lightTheme = {
         sidebar_background: '#ffffff',
         selected_item_background: '#f2f5fe',
         selected_item_border: '#00bcd4',
+        selected_item_text: '#ffffff',
     },
     ...extras,
 };
@@ -132,6 +134,7 @@ export const darkTheme = {
         selected_item_background: '#f2f5fe',
         selected_item: '#00bcd4',
         selected_item_border: '#00bcd4',
+        selected_item_text: '#333333',
     },
     ...extras,
 };

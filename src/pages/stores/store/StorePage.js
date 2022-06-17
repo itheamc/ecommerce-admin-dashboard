@@ -1,4 +1,6 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
+import { themeValueSelector } from '../../../states/theme/themeSlice';
 import {
     StoreContainer,
     StoreInformationContainer,
@@ -20,7 +22,8 @@ const option = {
     width: 2,
     curve: 'smooth'
   },
-  chart: {
+    chart: {
+    background: 'transparent',
     stacked: false,
     zoom: {
       type: 'x',
@@ -63,6 +66,7 @@ const option = {
 };
 
 const StorePage = () => {
+    const _theme = useSelector(themeValueSelector);
     return (
         <StoreContainer>
             <StoreInformationContainer>
@@ -83,7 +87,7 @@ const StorePage = () => {
                 </StoreCard>
                 <StoreSellingCard>
                     <h3>Store Selling (Last six month)</h3>
-                    <div> <AChart options={option} series={option.series} type="area" width="100%" /> </div>
+                    <div> <AChart options={{ ...option, theme: { mode: _theme, palette: 'palette1' } }} series={option.series} type="area" width="100%" height="250px" /> </div>
                 </StoreSellingCard>
                 <StoreTopProductsCard>
                     <h3>Store Top Products</h3>

@@ -56,7 +56,7 @@ export const OrdersTable = styled(Table)`
                     }
 
                     & > span#item-name {
-                        font-weight: ${props => props.theme.font_weight.regular};
+                        font-weight: ${props => props.theme.font_weight.bold};
                     }
                 }
 
@@ -78,6 +78,15 @@ export const OrdersTable = styled(Table)`
                     padding: ${props => props.theme.padding.xxx_small} ${props => props.theme.padding.small};
                 }
             }
+        }
+    }
+
+    @media (max-width: 884px) {
+        & > thead > tr > th.serial-number,.customer {
+            display: none;
+        }
+        & > tbody > tr > td.serial-number {
+            display: none;
         }
     }
 `

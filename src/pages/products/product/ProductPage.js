@@ -38,8 +38,8 @@ const ProductPage = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dolor voluptatem voluptate numquam omnis debitis ab. Libero nulla magnam explicabo repellendus esse. Ullam dolore cumque error necessitatibus expedita, doloribus consequuntur a vel suscipit dolorem beatae maiores velit. Et voluptatibus cupiditate sapiente magnam dolore quisquam optio quo dolorum repudiandae! Ad tenetur iusto harum inventore adipisci! Cupiditate ullam id assumenda dolore quos excepturi non, blanditiis laudantium repudiandae voluptatem nostrum dolores, nobis natus. Illo ipsam maiores architecto exercitationem explicabo, sed assumenda adipisci quas cupiditate modi alias laborum eum eligendi facilis error porro. Quos alias laborum ullam sit nulla animi saepe maxime eveniet quo?</p>
                 </div>
             </ProductContainer>
-          <ProductRatingAndReviewsContainer>
-              <h3>Ratings</h3>
+            <ProductRatingAndReviewsContainer>
+                <h3>Ratings</h3>
                 <div className="product-rating-container">
                     <div className="rating-container">
                         <div className="rating-points">

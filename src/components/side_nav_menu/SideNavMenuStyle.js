@@ -56,10 +56,25 @@ export const MenuItem = styled.li`
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
 
-`
+    & > div.drop-down-menu {
+        width: 100%;
+        height: ${props => props.expanded ? '15rem' : '0px'};
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        opacity: ${props => props.expanded ? '1' : '0'};
+        margin-left: ${props => props.theme.margin.xxx_large};
+        transition: all 0.3s ease-in-out;
+    }
+
+`;
+
 
 export const MenuItemLink = styled(NavLink)`
     width: 100%;
@@ -75,6 +90,7 @@ export const MenuItemLink = styled(NavLink)`
     cursor: pointer;
 
     &:hover {
+        // background: ${props => props.selected ? props.theme.color.selected_item_text : props.theme.color.selected_item_text};
         color: ${props => props.theme.color.primary};
         transform: translateX(0.5rem);
 
@@ -94,18 +110,39 @@ export const MenuItemLink = styled(NavLink)`
         font-weight: ${props => props.selected ? props.theme.font_weight.medium : props.theme.font_weight.regular};
         font-size: ${props => props.theme.font_size.large};
     }
-
-    &::before {
-        height: 80%;
-        position: absolute;
-        content: '';
-        right: 0;
-        width: ${props => props.theme.border_width.medium};
-        border-radius: ${props => props.theme.border_radius.medium};
-        background-color: ${props => props.selected ? props.theme.color.primary : "transparent"};
-        transition: all 0.35s ease-in-out;
+    
+    & > span.sub-item { 
+        font-size: ${props => props.theme.font_size.medium};
+        color: ${props => props.selected ? props.theme.color.primary : props.theme.color.menu_item_text};
     }
-`
+
+    & > div.dropdown-arrow {
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        & > i {
+            color: ${props => props.selected ? props.theme.color.primary : props.theme.color.menu_item_text};
+            font-size: ${props => props.theme.font_size.x_large};
+            transform: ${props => props.expanded ? 'rotate(180deg)' : 'rotate(0deg)'};
+            transition: all 0.35s ease-in-out;
+        }
+    }
+
+    // &::before {
+    //     height: 80%;
+    //     position: absolute;
+    //     content: '';
+    //     right: 0;
+    //     width: ${props => props.theme.border_width.medium};
+    //     border-radius: ${props => props.theme.border_radius.medium};
+    //     background-color: ${props => props.selected ? props.theme.color.primary : "transparent"};
+    //     transition: all 0.35s ease-in-out;
+    // }
+
+`;
 
 
 export const SecondaryMenuItems = styled.ul`

@@ -4,7 +4,7 @@ import {
     OrdersContainer,
     OrdersTableCard,
     OrdersTable
-} from './OrderStyle.js'
+} from './OrdersStyle.js'
 
 const OrdersPage = () => {
     return (
@@ -17,11 +17,11 @@ const OrdersPage = () => {
                 <OrdersTable>
                     <thead>
                         <tr>
-                            <th>S.N.</th>
+                            <th className='serial-number'>S.N.</th>
                             <th>Order No.</th>
                             <th>Items</th>
                             <th>Store</th>
-                            <th>Customer</th>
+                            <th className='customer'>Customer</th>
                             <th>Ordered On</th>
                             <th>Amount</th>
                             <th>Status</th>
@@ -33,7 +33,7 @@ const OrdersPage = () => {
                             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map(item => {
                                 return (
                                     <tr key={item}>
-                                        <td>
+                                        <td className='serial-number'>
                                             <span>#{item}</span>
                                         </td>
                                         <td>
@@ -51,7 +51,7 @@ const OrdersPage = () => {
                                         <td>
                                             <span>Store {item}</span>
                                         </td>
-                                        <td>
+                                        <td className='customer'>
                                             <span>Customer { item }</span>
                                         </td>
                                         <td>

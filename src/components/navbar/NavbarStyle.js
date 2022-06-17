@@ -66,7 +66,26 @@ export const SearchContainer = styled.div`
         border: none;
         color: ${props => props.theme.color.secondary_text};
     }
-`
+`;
+
+
+export const ThemeToggler = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > i.ri-moon-line {
+        position: relative;
+        font-size: ${props => props.theme.font_size.x_large};
+        visibility: ${props => props.isLight ? 'visible' : 'hidden'};
+    }
+
+    & > i.ri-sun-fill {
+        position: absolute;
+        font-size: ${props => props.theme.font_size.x_large};
+        visibility: ${props => props.isLight ? 'hidden' : 'visible'};
+    } 
+`;
 
 /**
  * Notification Icon container
@@ -96,7 +115,7 @@ export const NotificationIconContainer = styled.div`
     &:hover {
         cursor: pointer;
         &::before {
-            background-color: ${props => props.theme.color.primary_text};
+            display: none;
         }
     }
 

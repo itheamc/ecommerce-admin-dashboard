@@ -20,6 +20,9 @@ import { AChart } from '../../components/styles/Styles.js';
 const option = {
   series: [560, 129, 73],
   labels: ['Active', 'Inactive', 'Popular'],
+  chart: {
+    background: 'transparent',
+  }
 };
 
 const l_option = {
@@ -74,9 +77,9 @@ const l_option = {
 
 const c_option = {
   series: [5000, 740, 1300],
-  chartOptions: {
-    labels: ['Active', 'Inactive', 'New User'],
-    textColor: '#fff',
+  labels: ['Active', 'Inactive', 'New User'], 
+  chart: {
+    background: 'transparent',
   },
   pie: {
     expandOnClick: false,
@@ -174,17 +177,17 @@ const ReportPage = () => {
           <AChart options={{...l_option, theme: {
       mode: _theme, 
       palette: 'palette1', 
-  }}} series={l_option.series} type="area" width="100%" height="100%"/>
+  }}} series={l_option.series} type="area" width="100%" height="250px"/>
         </RevenueCard>
         <SellerCard>
           <h2>Sellers</h2>
-          <div><AChart options={option} series={option.series} type="donut" width="100%" /></div>
+          <div><AChart options={{ ...option, theme: { mode: _theme, palette: 'palette1' } }} series={option.series} type="donut" width="100%" height="250px"/></div>
         </SellerCard>
       </MiddleReportContainer>
       <CustomerRatingAndReviewsContainer>
         <CustomerCard>
           <h2>Customers</h2>
-          <div><AChart options={c_option} series={c_option.series} type="pie" width="100%" /></div>
+          <div><AChart options={{ ...c_option, theme: { mode: _theme, palette: 'palette1' } }} series={c_option.series} type="pie" width="100%" height="250px" /></div>
         </CustomerCard>
         <RatingCard>
           <h2>Total Ratings</h2>
@@ -243,7 +246,7 @@ const ReportPage = () => {
         </RatingCard>
         <TotalReviewsCard>
           <h2>Total Reviews</h2>
-          <div><AChart options={r_option} series={r_option.series} type="radialBar" width="100%" /></div>
+          <div><AChart options={r_option} series={r_option.series} type="radialBar" width="100%" height="250px" /></div>
         </TotalReviewsCard>
       </CustomerRatingAndReviewsContainer>
     </ReportContainer>

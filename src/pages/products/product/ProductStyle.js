@@ -6,6 +6,10 @@ export const ProductsContainer = styled.div`
     display: flex;
     gap: ${props => props.theme.gap.medium};
     padding: ${props => props.theme.padding.medium};
+
+    @media (max-width: 884px) {
+        flex-direction: column;
+    }
 `
 
 export const ProductContainer = styled(Card)`

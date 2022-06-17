@@ -36,7 +36,9 @@ export const OrderDetailsContents = styled.div`
     gap: ${props => props.theme.gap.medium};
     margin-top: ${props => props.theme.gap.small};
 
-    
+    @media (max-width: 884px) {
+        flex-direction: column;
+    }
 `
 
 export const OrderItemsCard = styled(Card)`
@@ -184,6 +186,11 @@ export const CustomerAndOrderDetailsContainer = styled.div`
     width: 100%;
     gap: ${props => props.theme.gap.medium};
     margin-top: ${props => props.theme.gap.medium};
+
+    @media (max-width: 884px) {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
 `
 
 export const CustomerAndOrderHeaderContainer = styled.div`

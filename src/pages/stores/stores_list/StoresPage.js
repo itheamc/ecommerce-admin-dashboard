@@ -3,10 +3,18 @@ import { Link } from 'react-router-dom'
 import {
     StoresContainer,
     StoresTableCard,
-    StoresTable
+    StoresTable,
+    IconActionContainer
 } from './StoresStyle.js'
+import { useState } from 'react'
 
 const StoresPage = () => {
+    const [actionVisible, setActionVisible] = useState(false)
+
+    const toggleAction = () => {
+        setActionVisible(!actionVisible)
+    }
+
     return (
         <StoresContainer>
             <StoresTableCard>
@@ -17,11 +25,11 @@ const StoresPage = () => {
                 <StoresTable>
                     <thead>
                         <tr>
-                            <th>S.N.</th>
-                            <th>Store Id</th>
+                            <th className='serial-number'>S.N.</th>
+                            <th>Id</th>
                             <th>Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
+                            <th className='phone'>Phone</th>
+                            <th className='email'>Email</th>
                             <th>Address</th>
                             <th>Joined On</th>
                             <th>Status</th>
@@ -33,7 +41,7 @@ const StoresPage = () => {
                             [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map(item => {
                                 return (
                                     <tr key={item}>
-                                        <td>
+                                        <td className='serial-number'>
                                             <span>#{item}</span>
                                         </td>
                                         <td>
@@ -47,10 +55,10 @@ const StoresPage = () => {
                                                 <span id='store-name'>Store {item} Name</span>
                                             </div>
                                         </td>
-                                        <td>
+                                        <td className='phone'>
                                             <span>+977-082-540151</span>
                                         </td>
-                                        <td>
+                                        <td className='email'>
                                             <span>store{item}@email.com</span>
                                         </td>
                                         <td>
@@ -66,7 +74,13 @@ const StoresPage = () => {
                                             <span id='status'>Active</span>
                                         </td>
                                         <td>
-                                            <i className="ri-more-2-fill"></i>
+                                            <IconActionContainer show={actionVisible}>
+                                                <i className="ri-more-2-fill" onClick={toggleAction}></i>
+                                                <div className='icon-action'>
+                                                    <button className='edit-button'>Edit</button>
+                                                    <button className='delete-button'>Delete</button>
+                                                </div>
+                                            </IconActionContainer>
                                         </td>
                                     </tr>
                                 )

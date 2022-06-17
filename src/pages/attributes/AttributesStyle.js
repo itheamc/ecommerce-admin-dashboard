@@ -1,18 +1,27 @@
 import styled from 'styled-components';
-import { Card, Table } from '../../../components/styles/Styles';
+import { Card, Table } from '../../components/styles/Styles';
 
-export const ProductsContainer = styled.div`
+
+export const AttributesContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     padding: ${props => props.theme.padding.medium};
-`
-export const ProductsCard = styled(Card)`
-    width: 100%;
+    gap: ${props => props.theme.gap.medium};
 
-    & > div.products-card-header {
+    & > h2 {
+        font-size: ${props => props.theme.font_size.large};
+        font-weight: 500;
+        color: ${props => props.theme.color.secondary_text};
+    }
+`;
+
+export const AttributesTableCard = styled(Card)`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & > div.attributes-card-header {
         gap: ${props => props.theme.gap.medium};
         margin-bottom: ${props => props.theme.padding.medium};
 
@@ -25,10 +34,9 @@ export const ProductsCard = styled(Card)`
             font-size: ${props => props.theme.font_size.small};
         }
     }
-`
+`;
 
-
-export const ProductsTable = styled(Table)`
+export const AttributesTable = styled(Table)`
     & > tbody {
 
         & > tr {
@@ -36,27 +44,11 @@ export const ProductsTable = styled(Table)`
             & > td {
                 padding: ${props => props.theme.padding.medium} 0;
                 
-                & > div {
-                    width: max-content;
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
-                    gap: ${props => props.theme.gap.small};
-
-                    & > img {
-                        width: 30px;
-                        height: 30px;
-                        border-radius: ${props => props.theme.border_radius.circular};
-                        object-fit: contain;
-                    }
-
-                    & > span#product-name {
-                        font-weight: ${props => props.theme.font_weight.bold};
-                    }
+                & > span#attribute-name {
+                    font-weight: ${props => props.theme.font_weight.bold};
                 }
 
-                & > span#product-id {
+                & > span#attribute-id {
                     cursor: pointer;
 
                     &:hover {
@@ -72,17 +64,15 @@ export const ProductsTable = styled(Table)`
                     border-radius: ${props => props.theme.border_radius.large};
                     padding: ${props => props.theme.padding.xxx_small} ${props => props.theme.padding.small};
                 }
+
+                & > div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: ${props => props.theme.gap.small};
+                }
             }
         }
     }
-
-
-    @media (max-width: 884px) {
-        & > thead > tr > th.serial-number,.category,.price {
-            display: none;
-        }
-
-        & > tbody > tr > td.serial-number,.category {
-            display: none;
-    }
-`
+`;

@@ -1,4 +1,6 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
+import { themeValueSelector } from '../../states/theme/themeSlice.js';
 import {
     HomeContainer,
     SummaryCardContainer,
@@ -11,10 +13,10 @@ import {
     CustomersProductsCardsContainer,
     TopProductsListCard,
     TopProductsTable,
-    CustomersCard
+    CustomersCard,
 } from './HomeStyle.js'
 
-import { AChart } from '../../components/styles/Styles.js'
+import { AChart, Table } from '../../components/styles/Styles.js'
 
 const option = {
     series: [{
@@ -26,6 +28,7 @@ const option = {
     curve: 'smooth'
   },
     chart: {
+        background: 'transparent',
         stacked: false,
         zoom: {
             type: 'x',
@@ -67,17 +70,11 @@ const option = {
   },
 };
 
-const d_option = {
-    series: [35, 23],
-    labels: ['Current Customers', 'New Customers'],
-    stroke: {
-        width: 3,
-        lineCap: 'round'
-    },
-}
 
 
 const HomePage = () => {
+    const _theme = useSelector(themeValueSelector);
+
     return (
         <HomeContainer>
             <SummaryCardContainer>
@@ -121,7 +118,7 @@ const HomePage = () => {
             <MiddleHomeCardContainer>
                 <DailySalesCard>
                     <h2>Daily Sales</h2>
-                    <AChart options={option} series={option.series} type="area" width="100%" height="100%"/>
+                    <AChart options={{ ...option, theme: { mode: _theme, palette: 'palette1' } }} series={option.series} type="area" width="100%" height="250px"/>
                 </DailySalesCard>
                 <NewlyRegisteredStoreCard>
                     <div className='new-store-card-header'>
@@ -226,8 +223,60 @@ const HomePage = () => {
                     </TopProductsTable>
                 </TopProductsListCard>
                 <CustomersCard>
-                    <h2>Customers</h2>
-                    <div><AChart options={d_option} series={d_option.series} type="radialBar" width="100%" /></div>
+                    <div className='transaction-header'>
+                        <div className='transaction-title'>
+                            <h2>Latest Transaction</h2>
+                            <p>Transaction by customers</p>
+                        </div>
+                        <div className='transaction-header-action'>
+                            <i className="ri-arrow-right-up-line"></i>
+                        </div>
+                    </div>
+                    <Table>
+                        <thead>
+                            <tr>
+                                <th>Customers</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <img src="assets/images/users/ana.jpg" alt="anna" />
+                                        <span>Ana</span>
+                                    </div>
+                                </td>
+                                <td>12/12/2021</td>
+                                <td>$100</td>
+                                <td><p className='received'>Received</p></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <img src="assets/images/users/jack.jpg" alt="jack" />
+                                        <span>Jack</span>
+                                    </div>
+                                </td>
+                                <td>12/12/2021</td>
+                                <td>$100</td>
+                                <td><p className='received'>Received</p></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <img src="assets/images/users/john.jpg" alt="john" />
+                                        <span>John</span>
+                                    </div>
+                                </td>
+                                <td>12/12/2021</td>
+                                <td>$100</td>
+                                <td><p className='received'>Received</p></td>
+                            </tr>
+                        </tbody>
+                    </Table>
                 </CustomersCard>
             </CustomersProductsCardsContainer>
         </HomeContainer>

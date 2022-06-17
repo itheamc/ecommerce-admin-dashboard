@@ -7,13 +7,17 @@ export const StoreContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: ${props => props.theme.gap.medium};
+    padding: ${props => props.theme.padding.medium};
 `;
 
 export const StoreInformationContainer = styled.div`
     display: flex;
     gap: ${props => props.theme.gap.medium};
     width: 100%;
-    padding: ${props => props.theme.gap.medium};
+
+    @media (max-width: 884px) {
+        flex-direction: column;
+    }
 `;
 
 export const StoreCard = styled(Card)`

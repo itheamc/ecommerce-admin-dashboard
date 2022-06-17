@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { themeValueSelector, toggleTheme } from '../../states/theme/themeSlice.js'
 import {
     NavContainer,
     TitleContainer,
     NavContentContainer,
     SearchContainer,
+    ThemeToggler,
     NotificationIconContainer,
     ProfileIconContainer,
     ProfileMenuItem,
@@ -33,6 +36,11 @@ const Navbar = () => {
         setProfileVisible(!profileVisible)
     }
     
+    const theme = useSelector(themeValueSelector)
+
+    const dispatch = useDispatch()
+
+    
     return (
         <NavContainer>
             <TitleContainer>
@@ -44,6 +52,10 @@ const Navbar = () => {
                     <i className="ri-search-line"></i>
                     <input type="search" placeholder="Search" />
                 </SearchContainer>
+                <ThemeToggler onClick={() => dispatch(toggleTheme())} isLight={theme === 'light'}>
+                    <i className="ri-moon-line"></i>
+                    <i className="ri-sun-fill"></i>
+                </ThemeToggler>
                 <NotificationIconContainer show={notificationVisible}>
                     <i className="ri-notification-2-fill" onClick={toggleNotification}></i>
                     <div className='notification-card'>
@@ -59,7 +71,7 @@ const Navbar = () => {
                                 <p>2 minutes ago</p>
                             </div>
                             <div className='notification-actions'>
-                                <i class="ri-more-fill"></i>
+                                <i className="ri-more-fill"></i>
                             </div>
                         </div>
                         
@@ -76,25 +88,25 @@ const Navbar = () => {
                             <ProfileMenuItem>
                                 <MenuItem>
                                     <MenuItemLink to="/profile">
-                                        <i class="ri-user-line"></i>
+                                        <i className="ri-user-line"></i>
                                         <span>My Profile</span>
                                     </MenuItemLink>
                                 </MenuItem>
                                 <MenuItem>
                                     <MenuItemLink to="/profile">
-                                        <i class="ri-edit-box-line"></i>
+                                        <i className="ri-edit-box-line"></i>
                                         <span>Edit Profile</span>
                                     </MenuItemLink>
                                 </MenuItem>
                                 <MenuItem>
                                     <MenuItemLink to="/settings">
-                                        <i class="ri-settings-3-line"></i>
+                                        <i className="ri-settings-3-line"></i>
                                         <span>Setting</span>
                                     </MenuItemLink>
                                 </MenuItem>
                                 <MenuItem>
                                     <MenuItemLink to="/profile">
-                                        <i class="ri-logout-circle-r-line"></i>
+                                        <i className="ri-logout-circle-r-line"></i>
                                         <span>Logout</span>
                                     </MenuItemLink>
                                 </MenuItem>

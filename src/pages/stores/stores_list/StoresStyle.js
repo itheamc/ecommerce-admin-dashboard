@@ -56,10 +56,10 @@ export const StoresTable = styled(Table)`
                     }
 
                     & > span#store-name {
-                        font-weight: ${props => props.theme.font_weight.regular};
+                        font-weight: ${props => props.theme.font_weight.bold};
                     }
 
-                    & > i {
+                    & > i.ri-map-pin-user-fill {
                         color: ${props => props.theme.color.accent};
                         background-color: ${props => props.theme.color.divider};
                         border-radius: ${props => props.theme.border_radius.circular};
@@ -87,5 +87,36 @@ export const StoresTable = styled(Table)`
             }
         }
     }
+
+    @media (max-width: 884px) {
+        & > thead > tr > th.serial-number,.email,.phone {
+            display: none;
+        }
+        & > tbody > tr > td.serial-number {
+            display: none;
+        }
+    }
 `
+
+export const IconActionContainer = styled.div`
+    position: relative;
+
+    & > div.icon-action {
+        position: absolute;
+        right: 30px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: max-content;
+        height: max-content;
+        padding: ${props => props.theme.padding.small};
+        background-color: ${props => props.theme.color.card_background};
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        border-radius: ${props => props.theme.border_radius.medium};
+        visibility: ${props => props.show ? 'visible' : 'hidden'};
+        z-index: 1;
+    }
+`;
 
