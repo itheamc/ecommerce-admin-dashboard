@@ -28,6 +28,7 @@ import AttributesPage from './pages/attributes/AttributesPage.js';
 import ReviewsPage from './pages/reviews/ReviewsPage.js';
 import VariationAttributesPage from './pages/variation_attributes/VariationAttributesPage.js';
 import CategoriesPage from './pages/categories/CategoriesPage.js';
+import CategoryEditPage from './pages/categories/category_edit/CategoryEditPage.js';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
               <Route path="/variation-attributes" element={<VariationAttributesPage />} />
               <Route path="/categories" element={<CategoriesPage />} />
               <Route path="/reviews" element={<ReviewsPage />} />
+              <Route path="/category/:id/edit" element={<CategoryEditPage />} />
             </Routes>
           </ContentContainer>
         </MainContainer>

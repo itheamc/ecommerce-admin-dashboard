@@ -212,7 +212,7 @@ export const ProfileIconContainer = styled.div`
     & > div.profile-card {
         position: absolute;
         top: 50px;
-        right: -10px;
+        right: 0;
         width: 300px;
         height: max-content;
         border-radius: ${props => props.theme.border_radius.medium};
@@ -229,7 +229,7 @@ export const ProfileIconContainer = styled.div`
             content: '';
             position: absolute;
             top: -9px;
-            right: 20px;
+            right: 10px;
             width: 20px;
             height: 20px;
             border-radius: ${props => props.theme.border_radius.x_small};

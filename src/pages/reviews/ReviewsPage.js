@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   ReviewsPageContainer,
   ProductRatingCard,
@@ -7,6 +7,7 @@ import {
 } from './ReviewsStyle'
 
 const ReviewsPage = () => {
+
   return (
     <ReviewsPageContainer>
       <ProductRatingCard>
@@ -51,6 +52,124 @@ const ReviewsPage = () => {
       </ProductRatingCard>
       <ProductReviewsCard>
         <h3>Product Reviews</h3>
+        <div>
+          <h2>Nike Running Shoe</h2>
+          <span>4.5</span>
+        </div>
+        <div className='reviews-container'>
+          <div className='profile-pic'>
+            <img src="./assets/images/users/john.jpg" alt="john" />
+          </div>
+          <div className='review-content'>
+            <div className='reviews-header'>
+              <div className='reviews-header-left'>
+                <span>John Smith</span>
+              </div>
+              <div className='reviews-header-right'>
+                <i class="ri-star-s-fill"></i>
+                <i class="ri-star-s-fill"></i>
+                <i class="ri-star-s-fill"></i>
+                <i class="ri-star-s-fill"></i>                               
+                <i class="ri-star-half-s-fill"></i>
+              </div>
+            </div>
+            <div className='date'>
+              <span>12/12/2021</span>
+            </div>
+            <div className='products-image'>
+              <div className='left-product-image'>
+                <img src="./assets/images/nike1.png" alt="nike" />
+              </div>
+              <div className='middle-product-image'>
+                <img src="./assets/images/nike.png" alt="nike" />
+              </div>
+              <div className='right-product-image'> 
+                <img src="./assets/images/nike2.png" alt="nike" />
+              </div>
+            </div>
+            <div className='reviews-body'>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec eget ex euismod, consectetur nisi eu, consectetur nisi eu,
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className='reviews-container'>
+          <div className='profile-pic'>
+            <img src="./assets/images/users/jenny.jpg" alt="john" />
+          </div>
+          <div className='review-content'>
+            <div className='reviews-header'>
+              <div className='reviews-header-left'>
+                <span>Jenny Smith</span>
+              </div>
+              <div className='reviews-header-right'>
+                <i class="ri-star-s-fill"></i>
+                <i class="ri-star-s-fill"></i>
+                <i class="ri-star-s-fill"></i>
+                <i class="ri-star-s-fill"></i>                               
+                <i class="ri-star-half-s-fill"></i>
+              </div>
+            </div>
+            <div className='date'>
+              <span>12/12/2021</span>
+            </div>
+            <div className='products-image'>
+              <div className='left-product-image'>
+                <img src="./assets/images/nike1.png" alt="nike" />
+              </div>
+              <div className='middle-product-image'>
+                <img src="./assets/images/nike.png" alt="nike" />
+              </div>
+              <div className='right-product-image'> 
+                <img src="./assets/images/nike2.png" alt="nike" />
+              </div>
+            </div>
+            <div className='reviews-body'>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec eget ex euismod, consectetur nisi eu, consectetur nisi eu,
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className='reviews-container'>
+          <div className='profile-pic'>
+            <img src="./assets/images/users/jenny.jpg" alt="john" />
+          </div>
+          <div className='review-content'>
+            <div className='reviews-header'>
+              <div className='reviews-header-left'>
+                <span>Jenny Smith</span>
+              </div>
+              <div className='reviews-header-right'>
+                <i class="ri-star-s-fill"></i>
+                <i class="ri-star-s-fill"></i>
+                <i class="ri-star-s-fill"></i>
+                <i class="ri-star-s-fill"></i>                               
+                <i class="ri-star-half-s-fill"></i>
+              </div>
+            </div>
+            <div className='date'>
+              <span>12/12/2021</span>
+            </div>
+            <div className='products-image'>
+              <div className='left-product-image'>
+                <img src="./assets/images/nike1.png" alt="nike" />
+              </div>
+              <div className='middle-product-image'>
+                <img src="./assets/images/nike.png" alt="nike" />
+              </div>
+              <div className='right-product-image'> 
+                <img src="./assets/images/nike2.png" alt="nike" />
+              </div>
+            </div>
+            <div className='reviews-body'>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Donec eget ex euismod, consectetur nisi eu, consectetur nisi eu,
+              </p>
+            </div>
+          </div>
+        </div>
       </ProductReviewsCard>
     </ReviewsPageContainer>
   )

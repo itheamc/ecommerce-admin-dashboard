@@ -26,6 +26,10 @@ const ProductEditPage = () => {
 
     return (
         <ProductEditPageContainer>
+            <div className='buttons'>
+                <button>Back to Products</button>
+                <button>Save Product</button>
+            </div>
             <form  method='POST' action='#'>
                 <ProductDetailsCard>
                     <label htmlFor="product-name">Product Name</label>

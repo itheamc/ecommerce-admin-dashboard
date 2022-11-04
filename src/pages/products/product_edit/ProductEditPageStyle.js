@@ -5,8 +5,25 @@ import { Card } from '../../../components/styles/Styles';
 export const ProductEditPageContainer = styled.div`
     display: flex;
     width: 100%;
+    flex-direction: column;
     padding: ${props => props.theme.padding.medium};
     gap: ${props => props.theme.gap.medium};
+
+    & > div.buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > button {
+            border: 1px solid ${props => props.theme.color.secondary_text};
+            padding: ${props => props.theme.padding.small} ${props => props.theme.padding.x_large};
+            border-radius: ${props => props.theme.border_radius.x_small};
+            // background-color: ${props => props.theme.color.accent};
+            // color: ${props => props.selected ? props.theme.color.selected_item_text : props.theme.color.selected_item_text};
+            cursor: pointer;
+        }
+    }
 
     & > form {
         width: 100%;
